@@ -1,0 +1,623 @@
+# \PublicStatusPageUptrends
+
+All URIs are relative to *https://api.uptrends.com/v4*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**PublicStatusPageAddAuthorizationToPublicStatusPage**](PublicStatusPageUptrends.md#PublicStatusPageAddAuthorizationToPublicStatusPage) | **Post** /PublicStatusPage/{publicStatusPageGuid}/Authorization | Creates a new authorization for the specified public status page.
+[**PublicStatusPageDeletePublicStatusPage**](PublicStatusPageUptrends.md#PublicStatusPageDeletePublicStatusPage) | **Delete** /PublicStatusPage/{publicStatusPageGuid} | Deletes the definition of the specified public status page.
+[**PublicStatusPageGetAuthorizationsForPublicStatusPage**](PublicStatusPageUptrends.md#PublicStatusPageGetAuthorizationsForPublicStatusPage) | **Get** /PublicStatusPage/{publicStatusPageGuid}/Authorization | Returns all authorizations for the specified public status page.
+[**PublicStatusPageGetPublicStatusPage**](PublicStatusPageUptrends.md#PublicStatusPageGetPublicStatusPage) | **Get** /PublicStatusPage/{publicStatusPageGuid} | Returns the definition of the specified public status page.
+[**PublicStatusPageGetPublicStatusPages**](PublicStatusPageUptrends.md#PublicStatusPageGetPublicStatusPages) | **Get** /PublicStatusPage | Returns the definition of all public status pages available in the account.
+[**PublicStatusPagePatchPublicStatusPage**](PublicStatusPageUptrends.md#PublicStatusPagePatchPublicStatusPage) | **Patch** /PublicStatusPage/{publicStatusPageGuid} | Partially updates the definition of the specified public status page.
+[**PublicStatusPagePostPublicStatusPage**](PublicStatusPageUptrends.md#PublicStatusPagePostPublicStatusPage) | **Post** /PublicStatusPage | Creates a new public status page.
+[**PublicStatusPagePutPublicStatusPage**](PublicStatusPageUptrends.md#PublicStatusPagePutPublicStatusPage) | **Put** /PublicStatusPage/{publicStatusPageGuid} | Updates the definition of the specified public status page.
+[**PublicStatusPageRemoveAuthorizationFromPublicStatusPage**](PublicStatusPageUptrends.md#PublicStatusPageRemoveAuthorizationFromPublicStatusPage) | **Delete** /PublicStatusPage/{publicStatusPageGuid}/Authorization/{authorizationGuid} | Removes an authorization from a public status page.
+
+
+
+## PublicStatusPageAddAuthorizationToPublicStatusPage
+
+> PSPAuthorization PublicStatusPageAddAuthorizationToPublicStatusPage(ctx, publicStatusPageGuid).Authorization(authorization).Execute()
+
+Creates a new authorization for the specified public status page.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    publicStatusPageGuid := "publicStatusPageGuid_example" // string | The Guid of the public status page.
+    authorization := *openapiclient.NewPSPAuthorization(map[string][]openapiclient.PSPAuthorizationType{ ... }) // PSPAuthorization | The complete definition of the authorization that should be created. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PublicStatusPageUptrends.PublicStatusPageAddAuthorizationToPublicStatusPage(context.Background(), publicStatusPageGuid).Authorization(authorization).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PublicStatusPageUptrends.PublicStatusPageAddAuthorizationToPublicStatusPage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PublicStatusPageAddAuthorizationToPublicStatusPage`: PSPAuthorization
+    fmt.Fprintf(os.Stdout, "Response from `PublicStatusPageUptrends.PublicStatusPageAddAuthorizationToPublicStatusPage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**publicStatusPageGuid** | **string** | The Guid of the public status page. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPublicStatusPageAddAuthorizationToPublicStatusPageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **authorization** | [**PSPAuthorization**](PSPAuthorization.md) | The complete definition of the authorization that should be created. | 
+
+### Return type
+
+[**PSPAuthorization**](PSPAuthorization.md)
+
+### Authorization
+
+[basicauth](../README.md#basicauth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, application/xml
+- **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PublicStatusPageDeletePublicStatusPage
+
+> PublicStatusPageDeletePublicStatusPage(ctx, publicStatusPageGuid).Execute()
+
+Deletes the definition of the specified public status page.
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    publicStatusPageGuid := "publicStatusPageGuid_example" // string | The Guid of the public status page that should be updated.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PublicStatusPageUptrends.PublicStatusPageDeletePublicStatusPage(context.Background(), publicStatusPageGuid).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PublicStatusPageUptrends.PublicStatusPageDeletePublicStatusPage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**publicStatusPageGuid** | **string** | The Guid of the public status page that should be updated. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPublicStatusPageDeletePublicStatusPageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[basicauth](../README.md#basicauth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PublicStatusPageGetAuthorizationsForPublicStatusPage
+
+> []PSPAuthorization PublicStatusPageGetAuthorizationsForPublicStatusPage(ctx, publicStatusPageGuid).Execute()
+
+Returns all authorizations for the specified public status page.
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    publicStatusPageGuid := "publicStatusPageGuid_example" // string | The Guid of the public status page.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PublicStatusPageUptrends.PublicStatusPageGetAuthorizationsForPublicStatusPage(context.Background(), publicStatusPageGuid).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PublicStatusPageUptrends.PublicStatusPageGetAuthorizationsForPublicStatusPage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PublicStatusPageGetAuthorizationsForPublicStatusPage`: []PSPAuthorization
+    fmt.Fprintf(os.Stdout, "Response from `PublicStatusPageUptrends.PublicStatusPageGetAuthorizationsForPublicStatusPage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**publicStatusPageGuid** | **string** | The Guid of the public status page. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPublicStatusPageGetAuthorizationsForPublicStatusPageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**[]PSPAuthorization**](PSPAuthorization.md)
+
+### Authorization
+
+[basicauth](../README.md#basicauth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PublicStatusPageGetPublicStatusPage
+
+> PublicStatusPage PublicStatusPageGetPublicStatusPage(ctx, publicStatusPageGuid).Execute()
+
+Returns the definition of the specified public status page.
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    publicStatusPageGuid := "publicStatusPageGuid_example" // string | The Guid of the requested public status page.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PublicStatusPageUptrends.PublicStatusPageGetPublicStatusPage(context.Background(), publicStatusPageGuid).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PublicStatusPageUptrends.PublicStatusPageGetPublicStatusPage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PublicStatusPageGetPublicStatusPage`: PublicStatusPage
+    fmt.Fprintf(os.Stdout, "Response from `PublicStatusPageUptrends.PublicStatusPageGetPublicStatusPage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**publicStatusPageGuid** | **string** | The Guid of the requested public status page. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPublicStatusPageGetPublicStatusPageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**PublicStatusPage**](PublicStatusPage.md)
+
+### Authorization
+
+[basicauth](../README.md#basicauth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PublicStatusPageGetPublicStatusPages
+
+> []PublicStatusPage PublicStatusPageGetPublicStatusPages(ctx).Execute()
+
+Returns the definition of all public status pages available in the account.
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PublicStatusPageUptrends.PublicStatusPageGetPublicStatusPages(context.Background()).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PublicStatusPageUptrends.PublicStatusPageGetPublicStatusPages``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PublicStatusPageGetPublicStatusPages`: []PublicStatusPage
+    fmt.Fprintf(os.Stdout, "Response from `PublicStatusPageUptrends.PublicStatusPageGetPublicStatusPages`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+This endpoint does not need any parameter.
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPublicStatusPageGetPublicStatusPagesRequest struct via the builder pattern
+
+
+### Return type
+
+[**[]PublicStatusPage**](PublicStatusPage.md)
+
+### Authorization
+
+[basicauth](../README.md#basicauth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PublicStatusPagePatchPublicStatusPage
+
+> PublicStatusPagePatchPublicStatusPage(ctx, publicStatusPageGuid).PublicStatusPage(publicStatusPage).Execute()
+
+Partially updates the definition of the specified public status page.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    publicStatusPageGuid := "publicStatusPageGuid_example" // string | The Guid of the public status page that should be updated.
+    publicStatusPage := *openapiclient.NewPublicStatusPage() // PublicStatusPage | The partial definition for the public status page that should be updated. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PublicStatusPageUptrends.PublicStatusPagePatchPublicStatusPage(context.Background(), publicStatusPageGuid).PublicStatusPage(publicStatusPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PublicStatusPageUptrends.PublicStatusPagePatchPublicStatusPage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**publicStatusPageGuid** | **string** | The Guid of the public status page that should be updated. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPublicStatusPagePatchPublicStatusPageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **publicStatusPage** | [**PublicStatusPage**](PublicStatusPage.md) | The partial definition for the public status page that should be updated. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[basicauth](../README.md#basicauth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, application/xml
+- **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PublicStatusPagePostPublicStatusPage
+
+> PublicStatusPage PublicStatusPagePostPublicStatusPage(ctx).PublicStatusPage(publicStatusPage).Execute()
+
+Creates a new public status page.
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    publicStatusPage := *openapiclient.NewPublicStatusPage() // PublicStatusPage | The complete definition for the public status page that should be updated. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PublicStatusPageUptrends.PublicStatusPagePostPublicStatusPage(context.Background()).PublicStatusPage(publicStatusPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PublicStatusPageUptrends.PublicStatusPagePostPublicStatusPage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `PublicStatusPagePostPublicStatusPage`: PublicStatusPage
+    fmt.Fprintf(os.Stdout, "Response from `PublicStatusPageUptrends.PublicStatusPagePostPublicStatusPage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPublicStatusPagePostPublicStatusPageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **publicStatusPage** | [**PublicStatusPage**](PublicStatusPage.md) | The complete definition for the public status page that should be updated. | 
+
+### Return type
+
+[**PublicStatusPage**](PublicStatusPage.md)
+
+### Authorization
+
+[basicauth](../README.md#basicauth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, application/xml
+- **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PublicStatusPagePutPublicStatusPage
+
+> PublicStatusPagePutPublicStatusPage(ctx, publicStatusPageGuid).PublicStatusPage(publicStatusPage).Execute()
+
+Updates the definition of the specified public status page.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    publicStatusPageGuid := "publicStatusPageGuid_example" // string | The Guid of the public status page that should be updated.
+    publicStatusPage := *openapiclient.NewPublicStatusPage() // PublicStatusPage | The complete definition for the public status page that should be updated. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PublicStatusPageUptrends.PublicStatusPagePutPublicStatusPage(context.Background(), publicStatusPageGuid).PublicStatusPage(publicStatusPage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PublicStatusPageUptrends.PublicStatusPagePutPublicStatusPage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**publicStatusPageGuid** | **string** | The Guid of the public status page that should be updated. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPublicStatusPagePutPublicStatusPageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **publicStatusPage** | [**PublicStatusPage**](PublicStatusPage.md) | The complete definition for the public status page that should be updated. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[basicauth](../README.md#basicauth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, application/xml
+- **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## PublicStatusPageRemoveAuthorizationFromPublicStatusPage
+
+> PublicStatusPageRemoveAuthorizationFromPublicStatusPage(ctx, publicStatusPageGuid, authorizationGuid).Execute()
+
+Removes an authorization from a public status page.
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    publicStatusPageGuid := "publicStatusPageGuid_example" // string | The Guid of the public status page.
+    authorizationGuid := "authorizationGuid_example" // string | The Guid of the authorization.
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PublicStatusPageUptrends.PublicStatusPageRemoveAuthorizationFromPublicStatusPage(context.Background(), publicStatusPageGuid, authorizationGuid).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PublicStatusPageUptrends.PublicStatusPageRemoveAuthorizationFromPublicStatusPage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**publicStatusPageGuid** | **string** | The Guid of the public status page. | 
+**authorizationGuid** | **string** | The Guid of the authorization. | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiPublicStatusPageRemoveAuthorizationFromPublicStatusPageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[basicauth](../README.md#basicauth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
