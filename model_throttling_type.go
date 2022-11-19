@@ -8,12 +8,13 @@
  */
 
 package uptrends
-// ThrottlingType : 
+
+// ThrottlingType :
 type ThrottlingType string
 
 // List of ThrottlingType
 const (
-	INACTIVE ThrottlingType = "Inactive"
-	BROWSER ThrottlingType = "Browser"
+	INACTIVE  ThrottlingType = "Inactive"
+	BROWSER   ThrottlingType = "Browser"
 	SIMULATED ThrottlingType = "Simulated"
 )

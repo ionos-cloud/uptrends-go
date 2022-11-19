@@ -8,12 +8,13 @@
  */
 
 package uptrends
-// ErrorLevel : 
+
+// ErrorLevel :
 type ErrorLevel string
 
 // List of ErrorLevel
 const (
-	NO_ERROR ErrorLevel = "NoError"
+	NO_ERROR    ErrorLevel = "NoError"
 	UNCONFIRMED ErrorLevel = "Unconfirmed"
-	CONFIRMED ErrorLevel = "Confirmed"
+	CONFIRMED   ErrorLevel = "Confirmed"
 )

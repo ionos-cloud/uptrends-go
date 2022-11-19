@@ -10,8 +10,8 @@
 package uptrends
 
 type ApiVariableDefinition struct {
-	Source *ApiVariableSourceType `json:"Source"`
-	Property string `json:"Property,omitempty"`
-	Name string `json:"Name,omitempty"`
+	Source    *ApiVariableSourceType  `json:"Source"`
+	Property  string                  `json:"Property,omitempty"`
+	Name      string                  `json:"Name,omitempty"`
 	Arguments []ApiVariableDefinition `json:"Arguments,omitempty"`
 }

@@ -8,13 +8,14 @@
  */
 
 package uptrends
-// SftpAction : 
+
+// SftpAction :
 type SftpAction string
 
 // List of SftpAction
 const (
-	CONNECT_ONLY SftpAction = "ConnectOnly"
-	TEST_FILE_EXISTS SftpAction = "TestFileExists"
+	CONNECT_ONLY             SftpAction = "ConnectOnly"
+	TEST_FILE_EXISTS         SftpAction = "TestFileExists"
 	TEST_FILE_DOES_NOT_EXIST SftpAction = "TestFileDoesNotExist"
-	DOWN_LOAD_FILE SftpAction = "DownLoadFile"
+	DOWN_LOAD_FILE           SftpAction = "DownLoadFile"
 )

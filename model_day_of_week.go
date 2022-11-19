@@ -8,16 +8,17 @@
  */
 
 package uptrends
-// DayOfWeek : 
+
+// DayOfWeek :
 type DayOfWeek string
 
 // List of DayOfWeek
 const (
-	SUNDAY DayOfWeek = "Sunday"
-	MONDAY DayOfWeek = "Monday"
-	TUESDAY DayOfWeek = "Tuesday"
+	SUNDAY    DayOfWeek = "Sunday"
+	MONDAY    DayOfWeek = "Monday"
+	TUESDAY   DayOfWeek = "Tuesday"
 	WEDNESDAY DayOfWeek = "Wednesday"
-	THURSDAY DayOfWeek = "Thursday"
-	FRIDAY DayOfWeek = "Friday"
-	SATURDAY DayOfWeek = "Saturday"
+	THURSDAY  DayOfWeek = "Thursday"
+	FRIDAY    DayOfWeek = "Friday"
+	SATURDAY  DayOfWeek = "Saturday"
 )

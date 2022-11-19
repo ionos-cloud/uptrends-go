@@ -8,18 +8,19 @@
  */
 
 package uptrends
-// DnsQuery : 
+
+// DnsQuery :
 type DnsQuery string
 
 // List of DnsQuery
 const (
-	A_RECORD DnsQuery = "ARecord"
+	A_RECORD     DnsQuery = "ARecord"
 	CNAME_RECORD DnsQuery = "CnameRecord"
-	MX_RECORD DnsQuery = "MxRecord"
-	NS_RECORD DnsQuery = "NsRecord"
-	TXT_RECORD DnsQuery = "TxtRecord"
-	SOA_RECORD DnsQuery = "SoaRecord"
-	ROOT_SERVER DnsQuery = "RootServer"
-	AAAA_RECORD DnsQuery = "AaaaRecord"
-	SRV_RECORD DnsQuery = "SrvRecord"
+	MX_RECORD    DnsQuery = "MxRecord"
+	NS_RECORD    DnsQuery = "NsRecord"
+	TXT_RECORD   DnsQuery = "TxtRecord"
+	SOA_RECORD   DnsQuery = "SoaRecord"
+	ROOT_SERVER  DnsQuery = "RootServer"
+	AAAA_RECORD  DnsQuery = "AaaaRecord"
+	SRV_RECORD   DnsQuery = "SrvRecord"
 )

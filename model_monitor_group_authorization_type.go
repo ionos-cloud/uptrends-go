@@ -8,13 +8,14 @@
  */
 
 package uptrends
-// MonitorGroupAuthorizationType : 
+
+// MonitorGroupAuthorizationType :
 type MonitorGroupAuthorizationType string
 
 // List of MonitorGroupAuthorizationType
 const (
-	VIEW_MONITOR_DATA_IN_GROUP MonitorGroupAuthorizationType = "ViewMonitorDataInGroup"
-	VIEW_MONITORS_IN_GROUP MonitorGroupAuthorizationType = "ViewMonitorsInGroup"
-	EDIT_MONITORS_IN_GROUP MonitorGroupAuthorizationType = "EditMonitorsInGroup"
+	VIEW_MONITOR_DATA_IN_GROUP          MonitorGroupAuthorizationType = "ViewMonitorDataInGroup"
+	VIEW_MONITORS_IN_GROUP              MonitorGroupAuthorizationType = "ViewMonitorsInGroup"
+	EDIT_MONITORS_IN_GROUP              MonitorGroupAuthorizationType = "EditMonitorsInGroup"
 	CREATE_AND_DELETE_MONITORS_IN_GROUP MonitorGroupAuthorizationType = "CreateAndDeleteMonitorsInGroup"
 )

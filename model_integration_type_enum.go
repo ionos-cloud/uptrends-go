@@ -8,16 +8,17 @@
  */
 
 package uptrends
-// IntegrationTypeEnum : 
+
+// IntegrationTypeEnum :
 type IntegrationTypeEnum string
 
 // List of IntegrationTypeEnum
 const (
-	SLACK IntegrationTypeEnum = "Slack"
-	PAGER_DUTY IntegrationTypeEnum = "PagerDuty"
-	SMS IntegrationTypeEnum = "Sms"
-	EMAIL IntegrationTypeEnum = "Email"
-	PHONE IntegrationTypeEnum = "Phone"
-	STATUSHUB IntegrationTypeEnum = "Statushub"
+	SLACK           IntegrationTypeEnum = "Slack"
+	PAGER_DUTY      IntegrationTypeEnum = "PagerDuty"
+	SMS             IntegrationTypeEnum = "Sms"
+	EMAIL           IntegrationTypeEnum = "Email"
+	PHONE           IntegrationTypeEnum = "Phone"
+	STATUSHUB       IntegrationTypeEnum = "Statushub"
 	GENERIC_WEBHOOK IntegrationTypeEnum = "GenericWebhook"
 )

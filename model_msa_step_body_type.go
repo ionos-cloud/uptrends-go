@@ -10,5 +10,4 @@
 package uptrends
 
 // Determines what kind of body the request will have.
-type MsaStepBodyType struct {
-}
+type MsaStepBodyType struct{}

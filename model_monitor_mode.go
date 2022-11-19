@@ -8,12 +8,13 @@
  */
 
 package uptrends
-// MonitorMode : 
+
+// MonitorMode :
 type MonitorMode string
 
 // List of MonitorMode
 const (
 	DEVELOPMENT MonitorMode = "Development"
-	STAGING MonitorMode = "Staging"
-	PRODUCTION MonitorMode = "Production"
+	STAGING     MonitorMode = "Staging"
+	PRODUCTION  MonitorMode = "Production"
 )

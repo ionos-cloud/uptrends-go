@@ -10,14 +10,14 @@
 package uptrends
 
 type MonitorQuota struct {
-	BasicMonitors int32 `json:"BasicMonitors,omitempty"`
-	BasicMonitorsInUse int32 `json:"BasicMonitorsInUse,omitempty"`
-	BrowserMonitors int32 `json:"BrowserMonitors,omitempty"`
-	BrowserMonitorsInUse int32 `json:"BrowserMonitorsInUse,omitempty"`
-	ApiMonitoringCredits int32 `json:"ApiMonitoringCredits,omitempty"`
+	BasicMonitors             int32 `json:"BasicMonitors,omitempty"`
+	BasicMonitorsInUse        int32 `json:"BasicMonitorsInUse,omitempty"`
+	BrowserMonitors           int32 `json:"BrowserMonitors,omitempty"`
+	BrowserMonitorsInUse      int32 `json:"BrowserMonitorsInUse,omitempty"`
+	ApiMonitoringCredits      int32 `json:"ApiMonitoringCredits,omitempty"`
 	ApiMonitoringCreditsInUse int32 `json:"ApiMonitoringCreditsInUse,omitempty"`
-	TransactionCredits int32 `json:"TransactionCredits,omitempty"`
-	TransactionCreditsInUse int32 `json:"TransactionCreditsInUse,omitempty"`
-	Monitors int32 `json:"Monitors,omitempty"`
-	MonitorsInUse int32 `json:"MonitorsInUse,omitempty"`
+	TransactionCredits        int32 `json:"TransactionCredits,omitempty"`
+	TransactionCreditsInUse   int32 `json:"TransactionCreditsInUse,omitempty"`
+	Monitors                  int32 `json:"Monitors,omitempty"`
+	MonitorsInUse             int32 `json:"MonitorsInUse,omitempty"`
 }

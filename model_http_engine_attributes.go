@@ -11,9 +11,9 @@ package uptrends
 
 // HttpEngineAttributes describes the attributes of a Multi-step Api monitor check
 type HttpEngineAttributes struct {
-	// The results of the steps 
-	StepResults []HttpEngineStep `json:"StepResults,omitempty"`
-	TimingInfo *HttpEngineAttributesTimingInfo `json:"TimingInfo,omitempty"`
+	// The results of the steps
+	StepResults []HttpEngineStep                `json:"StepResults,omitempty"`
+	TimingInfo  *HttpEngineAttributesTimingInfo `json:"TimingInfo,omitempty"`
 	// Number of total steps
 	TotalSteps int32 `json:"TotalSteps"`
 	// Number of passed/succeed tests

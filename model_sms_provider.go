@@ -8,14 +8,15 @@
  */
 
 package uptrends
-// SmsProvider : 
+
+// SmsProvider :
 type SmsProvider string
 
 // List of SmsProvider
 const (
-	USE_ACCOUNT_SETTING SmsProvider = "UseAccountSetting"
-	SMS_PROVIDER_EUROPE SmsProvider = "SmsProviderEurope"
+	USE_ACCOUNT_SETTING        SmsProvider = "UseAccountSetting"
+	SMS_PROVIDER_EUROPE        SmsProvider = "SmsProviderEurope"
 	SMS_PROVIDER_INTERNATIONAL SmsProvider = "SmsProviderInternational"
-	SMS_PROVIDER_EUROPE2 SmsProvider = "SmsProviderEurope2"
-	SMS_PROVIDER_USA SmsProvider = "SmsProviderUSA"
+	SMS_PROVIDER_EUROPE2       SmsProvider = "SmsProviderEurope2"
+	SMS_PROVIDER_USA           SmsProvider = "SmsProviderUSA"
 )

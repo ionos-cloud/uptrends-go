@@ -11,5 +11,5 @@ package uptrends
 
 type RumWebsite struct {
 	RumWebsiteId string `json:"RumWebsiteId"`
-	Description string `json:"Description,omitempty"`
+	Description  string `json:"Description,omitempty"`
 }

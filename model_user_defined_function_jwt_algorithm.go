@@ -10,5 +10,4 @@
 package uptrends
 
 // This property is not supported yet
-type UserDefinedFunctionJwtAlgorithm struct {
-}
+type UserDefinedFunctionJwtAlgorithm struct{}

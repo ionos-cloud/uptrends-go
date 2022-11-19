@@ -9,7 +9,7 @@
 
 package uptrends
 
-// Monitor check attributes 
+// Monitor check attributes
 type MonitorCheckAttributes struct {
 	// Monitor identifier
 	MonitorGuid string `json:"MonitorGuid"`
@@ -28,8 +28,8 @@ type MonitorCheckAttributes struct {
 	// The number of downloaded bytes for this check.
 	TotalBytes int32 `json:"TotalBytes,omitempty"`
 	// The IP address that was found for the specified domain name as part of this monitor check.
-	ResolvedIpAddress string `json:"ResolvedIpAddress,omitempty"`
-	ErrorLevel *MonitorCheckAttributesErrorLevel `json:"ErrorLevel"`
+	ResolvedIpAddress string                            `json:"ResolvedIpAddress,omitempty"`
+	ErrorLevel        *MonitorCheckAttributesErrorLevel `json:"ErrorLevel"`
 	// A text value that describes the error that was found, or OK if no error was found.
 	ErrorDescription string `json:"ErrorDescription,omitempty"`
 	// Any additional error information, if available.

@@ -8,20 +8,21 @@
  */
 
 package uptrends
-// SubStepType : 
+
+// SubStepType :
 type SubStepType string
 
 // List of SubStepType
 const (
-	NAVIGATE SubStepType = "Navigate"
-	CLICK SubStepType = "Click"
-	SET SubStepType = "Set"
-	TEST SubStepType = "Test"
-	SCRIPT SubStepType = "Script"
-	HOVER SubStepType = "Hover"
-	SCREENSHOT SubStepType = "Screenshot"
-	SCROLL_TO SubStepType = "ScrollTo"
+	NAVIGATE         SubStepType = "Navigate"
+	CLICK            SubStepType = "Click"
+	SET              SubStepType = "Set"
+	TEST             SubStepType = "Test"
+	SCRIPT           SubStepType = "Script"
+	HOVER            SubStepType = "Hover"
+	SCREENSHOT       SubStepType = "Screenshot"
+	SCROLL_TO        SubStepType = "ScrollTo"
 	WAIT_FOR_ELEMENT SubStepType = "WaitForElement"
-	SWITCH_TO_FRAME SubStepType = "SwitchToFrame"
-	SWITCH_TO_TAB SubStepType = "SwitchToTab"
+	SWITCH_TO_FRAME  SubStepType = "SwitchToFrame"
+	SWITCH_TO_TAB    SubStepType = "SwitchToTab"
 )

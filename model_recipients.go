@@ -10,7 +10,7 @@
 package uptrends
 
 type Recipients struct {
-	Operators []string `json:"Operators,omitempty"`
-	OperatorGroups []string `json:"OperatorGroups,omitempty"`
+	Operators           []string `json:"Operators,omitempty"`
+	OperatorGroups      []string `json:"OperatorGroups,omitempty"`
 	ExtraEmailAddresses []string `json:"ExtraEmailAddresses,omitempty"`
 }

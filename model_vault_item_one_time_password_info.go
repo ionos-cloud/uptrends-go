@@ -10,5 +10,4 @@
 package uptrends
 
 // The one-time password info that is stored in this vault item, if applicable
-type VaultItemOneTimePasswordInfo struct {
-}
+type VaultItemOneTimePasswordInfo struct{}

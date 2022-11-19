@@ -8,11 +8,12 @@
  */
 
 package uptrends
-// HttpMethod : 
+
+// HttpMethod :
 type HttpMethod string
 
 // List of HttpMethod
 const (
-	GET HttpMethod = "Get"
+	GET  HttpMethod = "Get"
 	POST HttpMethod = "Post"
 )

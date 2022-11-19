@@ -11,10 +11,10 @@ package uptrends
 
 type AlertResponse struct {
 	// The resposne data/monitor checks
-	Data []Alert `json:"Data,omitempty"`
+	Data  []Alert                  `json:"Data,omitempty"`
 	Links *StatisticsResponseLinks `json:"Links,omitempty"`
 	// Relationships of the object
-	Relationships []RelationObject `json:"Relationships,omitempty"`
-	Meta *StatisticsResponseMeta `json:"Meta,omitempty"`
-	Cursors *AlertResponseCursors `json:"Cursors,omitempty"`
+	Relationships []RelationObject        `json:"Relationships,omitempty"`
+	Meta          *StatisticsResponseMeta `json:"Meta,omitempty"`
+	Cursors       *AlertResponseCursors   `json:"Cursors,omitempty"`
 }

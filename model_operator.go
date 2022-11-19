@@ -24,8 +24,8 @@ type Operator struct {
 	// The phone number of this operator to which SMS and phone alerts can be sent. Start with a plus (+) sign and your country code
 	MobilePhone string `json:"MobilePhone,omitempty"`
 	// The id of the phone number that will be used to send phone alerts (See /OutgoingPhoneNumber API under Miscellaneous for available ids)
-	OutgoingPhoneNumberId int32 `json:"OutgoingPhoneNumberId,omitempty"`
-	OutgoingPhoneNumberIdSpecified bool `json:"OutgoingPhoneNumberIdSpecified,omitempty"`
+	OutgoingPhoneNumberId          int32 `json:"OutgoingPhoneNumberId,omitempty"`
+	OutgoingPhoneNumberIdSpecified bool  `json:"OutgoingPhoneNumberIdSpecified,omitempty"`
 	// This indicates if the operator is the account administrator.
 	IsAccountAdministrator bool `json:"IsAccountAdministrator,omitempty"`
 	// The backup email address of this operator
@@ -33,22 +33,22 @@ type Operator struct {
 	// Indicates whether the operator is currently active
 	IsOnDuty bool `json:"IsOnDuty,omitempty"`
 	// If ommitted the operator will use the account culture. If set it will override the account default
-	CultureName string `json:"CultureName,omitempty"`
-	CultureNameSpecified bool `json:"CultureNameSpecified,omitempty"`
+	CultureName          string `json:"CultureName,omitempty"`
+	CultureNameSpecified bool   `json:"CultureNameSpecified,omitempty"`
 	// The id of the timezone of this operator (See /Timezone API under Miscellaneous for available timezones)
-	TimeZoneId int32 `json:"TimeZoneId,omitempty"`
-	TimeZoneIdSpecified bool `json:"TimeZoneIdSpecified,omitempty"`
-	SmsProvider *OperatorSmsProvider `json:"SmsProvider,omitempty"`
+	TimeZoneId          int32                `json:"TimeZoneId,omitempty"`
+	TimeZoneIdSpecified bool                 `json:"TimeZoneIdSpecified,omitempty"`
+	SmsProvider         *OperatorSmsProvider `json:"SmsProvider,omitempty"`
 	// Set to True to override the default behavior of sending SMS alerts with textual sender ID
-	UseNumericSender bool `json:"UseNumericSender,omitempty"`
+	UseNumericSender          bool `json:"UseNumericSender,omitempty"`
 	UseNumericSenderSpecified bool `json:"UseNumericSenderSpecified,omitempty"`
 	// This can only be set to false if the account has SSO enabled. Ommitting or providing null will use the account default
-	AllowNativeLogin bool `json:"AllowNativeLogin,omitempty"`
+	AllowNativeLogin          bool `json:"AllowNativeLogin,omitempty"`
 	AllowNativeLoginSpecified bool `json:"AllowNativeLoginSpecified,omitempty"`
 	// This can only be set to true if the account has SSO enabled. Ommitting or providing null will use the account default
-	AllowSingleSignon bool `json:"AllowSingleSignon,omitempty"`
+	AllowSingleSignon          bool `json:"AllowSingleSignon,omitempty"`
 	AllowSingleSignonSpecified bool `json:"AllowSingleSignonSpecified,omitempty"`
 	// This is used to set the default dashboard for the operator.  Valid options are: UseAccountSpecifiedDashboard (This will use the dashboard specified for the account) Any built-in dashboard: e.g. AccountOverview Any custom dashboard to which the operator has access to, defined by the guid of this dashboard
-	DefaultDashboard string `json:"DefaultDashboard,omitempty"`
-	SetupMode *OperatorSetupMode `json:"SetupMode,omitempty"`
+	DefaultDashboard string             `json:"DefaultDashboard,omitempty"`
+	SetupMode        *OperatorSetupMode `json:"SetupMode,omitempty"`
 }

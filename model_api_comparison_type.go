@@ -8,19 +8,20 @@
  */
 
 package uptrends
-// ApiComparisonType : 
+
+// ApiComparisonType :
 type ApiComparisonType string
 
 // List of ApiComparisonType
 const (
-	EQUAL ApiComparisonType = "Equal"
-	DOES_NOT_EQUAL ApiComparisonType = "DoesNotEqual"
-	CONTAINS_TEXT ApiComparisonType = "ContainsText"
+	EQUAL                 ApiComparisonType = "Equal"
+	DOES_NOT_EQUAL        ApiComparisonType = "DoesNotEqual"
+	CONTAINS_TEXT         ApiComparisonType = "ContainsText"
 	DOES_NOT_CONTAIN_TEXT ApiComparisonType = "DoesNotContainText"
-	SHOULD_BE_IGNORED ApiComparisonType = "ShouldBeIgnored"
-	LESS_THAN ApiComparisonType = "LessThan"
-	GREATER_THAN ApiComparisonType = "GreaterThan"
-	LESS_THAN_OR_EQUAL ApiComparisonType = "LessThanOrEqual"
+	SHOULD_BE_IGNORED     ApiComparisonType = "ShouldBeIgnored"
+	LESS_THAN             ApiComparisonType = "LessThan"
+	GREATER_THAN          ApiComparisonType = "GreaterThan"
+	LESS_THAN_OR_EQUAL    ApiComparisonType = "LessThanOrEqual"
 	GREATER_THAN_OR_EQUAL ApiComparisonType = "GreaterThanOrEqual"
-	IS_NOT_EMPTY ApiComparisonType = "IsNotEmpty"
+	IS_NOT_EMPTY          ApiComparisonType = "IsNotEmpty"
 )

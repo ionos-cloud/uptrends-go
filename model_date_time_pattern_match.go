@@ -10,6 +10,6 @@
 package uptrends
 
 type DateTimePatternMatch struct {
-	OffsetUTC int32 `json:"OffsetUTC"`
+	OffsetUTC     int32 `json:"OffsetUTC"`
 	MaxDifference int32 `json:"MaxDifference"`
 }

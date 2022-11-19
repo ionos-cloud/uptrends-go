@@ -10,6 +10,6 @@
 package uptrends
 
 type PeriodMetaData struct {
-	Warning string `json:"Warning,omitempty"`
-	MaximumRetentionDays int32 `json:"MaximumRetentionDays"`
+	Warning              string `json:"Warning,omitempty"`
+	MaximumRetentionDays int32  `json:"MaximumRetentionDays"`
 }

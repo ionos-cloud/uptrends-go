@@ -15,9 +15,9 @@ type Sla struct {
 	// Hash corresponding with this sla.
 	Hash string `json:"Hash,omitempty"`
 	// The description name of this sla.
-	Description string `json:"Description,omitempty"`
-	UptimeErrorThreshold float64 `json:"UptimeErrorThreshold,omitempty"`
-	UptimeWarningThreshold float64 `json:"UptimeWarningThreshold,omitempty"`
-	LoadTimeErrorThreshold float64 `json:"LoadTimeErrorThreshold,omitempty"`
-	OperatorReponseTimeThreshold int32 `json:"OperatorReponseTimeThreshold,omitempty"`
+	Description                  string  `json:"Description,omitempty"`
+	UptimeErrorThreshold         float64 `json:"UptimeErrorThreshold,omitempty"`
+	UptimeWarningThreshold       float64 `json:"UptimeWarningThreshold,omitempty"`
+	LoadTimeErrorThreshold       float64 `json:"LoadTimeErrorThreshold,omitempty"`
+	OperatorReponseTimeThreshold int32   `json:"OperatorReponseTimeThreshold,omitempty"`
 }

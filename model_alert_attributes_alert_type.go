@@ -10,5 +10,4 @@
 package uptrends
 
 // Alert type indicating if this was an Error or Ok alert.
-type AlertAttributesAlertType struct {
-}
+type AlertAttributesAlertType struct{}

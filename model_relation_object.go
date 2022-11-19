@@ -10,9 +10,9 @@
 package uptrends
 
 type RelationObject struct {
-	// Object attributes 
+	// Object attributes
 	Attributes interface{} `json:"Attributes,omitempty"`
-	// Identifier 
+	// Identifier
 	Id interface{} `json:"Id,omitempty"`
 	// Object type
 	Type_ string `json:"Type,omitempty"`

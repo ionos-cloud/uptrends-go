@@ -10,5 +10,4 @@
 package uptrends
 
 // A value that represents the OK/Error state for this check: NoError if the result was OK, Unconfirmed if an error was found, Confirmed if an error was found as a double check, right after an Unconfirmed error.
-type MonitorCheckAttributesErrorLevel struct {
-}
+type MonitorCheckAttributesErrorLevel struct{}

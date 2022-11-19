@@ -10,8 +10,8 @@
 package uptrends
 
 type Dashboard struct {
-	DashboardGuid string `json:"DashboardGuid,omitempty"`
-	Name string `json:"Name,omitempty"`
+	DashboardGuid   string           `json:"DashboardGuid,omitempty"`
+	Name            string           `json:"Name,omitempty"`
 	DashboardFilter *DashboardFilter `json:"DashboardFilter,omitempty"`
-	AutoRefresh bool `json:"AutoRefresh,omitempty"`
+	AutoRefresh     bool             `json:"AutoRefresh,omitempty"`
 }

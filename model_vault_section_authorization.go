@@ -11,7 +11,7 @@ package uptrends
 
 type VaultSectionAuthorization struct {
 	// The unique ID of this authorization
-	AuthorizationId string `json:"AuthorizationId,omitempty"`
+	AuthorizationId   string                             `json:"AuthorizationId,omitempty"`
 	AuthorizationType *PspAuthorizationAuthorizationType `json:"AuthorizationType"`
 	// The GUID of the operator (NULL if this authorization is for an operator group)
 	OperatorGuid string `json:"OperatorGuid,omitempty"`

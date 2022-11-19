@@ -10,5 +10,4 @@
 package uptrends
 
 // The type of period
-type SelectedPeriodSelectedPeriodType struct {
-}
+type SelectedPeriodSelectedPeriodType struct{}

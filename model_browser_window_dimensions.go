@@ -10,9 +10,9 @@
 package uptrends
 
 type BrowserWindowDimensions struct {
-	IsMobile bool `json:"IsMobile"`
-	Width int32 `json:"Width"`
-	Height int32 `json:"Height"`
-	PixelRatio int32 `json:"PixelRatio"`
+	IsMobile     bool   `json:"IsMobile"`
+	Width        int32  `json:"Width"`
+	Height       int32  `json:"Height"`
+	PixelRatio   int32  `json:"PixelRatio"`
 	MobileDevice string `json:"MobileDevice,omitempty"`
 }

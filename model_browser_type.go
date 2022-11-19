@@ -8,17 +8,18 @@
  */
 
 package uptrends
-// BrowserType : 
+
+// BrowserType :
 type BrowserType string
 
 // List of BrowserType
 const (
-	IE BrowserType = "IE"
-	FIREFOX BrowserType = "Firefox"
-	CHROME BrowserType = "Chrome"
-	SAFARI BrowserType = "Safari"
-	PHANTOM_JS BrowserType = "PhantomJS"
-	PHANTOM_JS20 BrowserType = "PhantomJS20"
+	IE                        BrowserType = "IE"
+	FIREFOX                   BrowserType = "Firefox"
+	CHROME                    BrowserType = "Chrome"
+	SAFARI                    BrowserType = "Safari"
+	PHANTOM_JS                BrowserType = "PhantomJS"
+	PHANTOM_JS20              BrowserType = "PhantomJS20"
 	CHROME_WITH_EXTRA_METRICS BrowserType = "ChromeWithExtraMetrics"
-	EDGE BrowserType = "Edge"
+	EDGE                      BrowserType = "Edge"
 )

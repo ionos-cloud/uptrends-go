@@ -10,5 +10,4 @@
 package uptrends
 
 // The detailed status of the server
-type ServerHealthStatusDetails struct {
-}
+type ServerHealthStatusDetails struct{}

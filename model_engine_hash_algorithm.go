@@ -8,16 +8,17 @@
  */
 
 package uptrends
-// EngineHashAlgorithm : 
+
+// EngineHashAlgorithm :
 type EngineHashAlgorithm string
 
 // List of EngineHashAlgorithm
 const (
-	MD5 EngineHashAlgorithm = "MD5"
-	SHA1 EngineHashAlgorithm = "SHA1"
-	SHA256 EngineHashAlgorithm = "SHA256"
-	SHA512 EngineHashAlgorithm = "SHA512"
-	HMACSHA1 EngineHashAlgorithm = "HMACSHA1"
+	MD5        EngineHashAlgorithm = "MD5"
+	SHA1       EngineHashAlgorithm = "SHA1"
+	SHA256     EngineHashAlgorithm = "SHA256"
+	SHA512     EngineHashAlgorithm = "SHA512"
+	HMACSHA1   EngineHashAlgorithm = "HMACSHA1"
 	HMACSHA256 EngineHashAlgorithm = "HMACSHA256"
 	HMACSHA512 EngineHashAlgorithm = "HMACSHA512"
 )

@@ -1,0 +1,37 @@
+package main
+
+import (
+	"context"
+	"fmt"
+
+	"github.com/antihax/optional"
+	sw "github.com/ionos-cloud/uptrends-go"
+	"github.com/ionos-cloud/uptrends-go/utils"
+)
+
+func main() {
+	auth := context.WithValue(context.Background(), sw.ContextBasicAuth, sw.BasicAuth{
+		UserName: "",
+		Password: "",
+	})
+
+	client := sw.NewAPIClient(sw.NewConfiguration())
+
+	new := sw.Monitor{
+		Name:          "ionos.com - Uptime",
+		Url:           "https://ionos.com",
+		MonitorType:   utils.PtrMonitor(sw.HTTP),
+		CheckInterval: 5,
+	}
+
+	mon, _, err := client.MonitorApi.MonitorPostMonitor(
+		auth, &sw.MonitorApiMonitorPostMonitorOpts{
+			Monitor: optional.NewInterface(new),
+		},
+	)
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(mon.MonitorGuid)
+}

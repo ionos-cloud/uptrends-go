@@ -12,10 +12,10 @@ package uptrends
 // Response of the MonitorCheck endpoint
 type MonitorCheckResponse struct {
 	// The resposne data/monitor checks
-	Data []MonitorCheck `json:"Data,omitempty"`
+	Data  []MonitorCheck           `json:"Data,omitempty"`
 	Links *StatisticsResponseLinks `json:"Links,omitempty"`
 	// Relationships of the object
-	Relationships []RelationObject `json:"Relationships,omitempty"`
-	Meta *StatisticsResponseMeta `json:"Meta,omitempty"`
-	Cursors *AlertResponseCursors `json:"Cursors,omitempty"`
+	Relationships []RelationObject        `json:"Relationships,omitempty"`
+	Meta          *StatisticsResponseMeta `json:"Meta,omitempty"`
+	Cursors       *AlertResponseCursors   `json:"Cursors,omitempty"`
 }

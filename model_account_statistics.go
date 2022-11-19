@@ -10,9 +10,9 @@
 package uptrends
 
 type AccountStatistics struct {
-	AccountId string `json:"AccountId,omitempty"`
-	ExpirationDate interface{} `json:"ExpirationDate,omitempty"`
-	MonitorQuota *MonitorQuota `json:"MonitorQuota,omitempty"`
-	OperatorQuota *OperatorQuota `json:"OperatorQuota,omitempty"`
-	RemainingMessageCredits int32 `json:"RemainingMessageCredits,omitempty"`
+	AccountId               string         `json:"AccountId,omitempty"`
+	ExpirationDate          interface{}    `json:"ExpirationDate,omitempty"`
+	MonitorQuota            *MonitorQuota  `json:"MonitorQuota,omitempty"`
+	OperatorQuota           *OperatorQuota `json:"OperatorQuota,omitempty"`
+	RemainingMessageCredits int32          `json:"RemainingMessageCredits,omitempty"`
 }

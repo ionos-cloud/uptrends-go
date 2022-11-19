@@ -8,11 +8,12 @@
  */
 
 package uptrends
-// MaintenanceTypes : 
+
+// MaintenanceTypes :
 type MaintenanceTypes string
 
 // List of MaintenanceTypes
 const (
-	DISABLE_MONITORING MaintenanceTypes = "DisableMonitoring"
+	DISABLE_MONITORING    MaintenanceTypes = "DisableMonitoring"
 	DISABLE_NOTIFICATIONS MaintenanceTypes = "DisableNotifications"
 )
