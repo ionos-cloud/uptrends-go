@@ -11,8 +11,8 @@ import (
 
 func main() {
 	auth := context.WithValue(context.Background(), sw.ContextBasicAuth, sw.BasicAuth{
-		UserName: "bfd3c47585824e9badd88a6b56235de1",
-		Password: "TjqkuZqcwAQDoeiqZQrr/YbjRbgcF6aj",
+		UserName: "",
+		Password: "",
 	})
 
 	client := sw.NewAPIClient(sw.NewConfiguration())
