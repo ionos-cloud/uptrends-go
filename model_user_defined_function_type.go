@@ -8,15 +8,14 @@
  */
 
 package uptrends
-
-// UserDefinedFunctionType :
+// UserDefinedFunctionType : 
 type UserDefinedFunctionType string
 
 // List of UserDefinedFunctionType
 const (
-	MAPPING    UserDefinedFunctionType = "Mapping"
-	REGEX      UserDefinedFunctionType = "Regex"
+	MAPPING UserDefinedFunctionType = "Mapping"
+	REGEX UserDefinedFunctionType = "Regex"
 	JWT_ENCODE UserDefinedFunctionType = "JwtEncode"
 	JWT_DECODE UserDefinedFunctionType = "JwtDecode"
-	HASH       UserDefinedFunctionType = "Hash"
+	HASH UserDefinedFunctionType = "Hash"
 )

@@ -112,14 +112,47 @@ paths:
       summary: "Returns the status of the specified private checkpoints."
       operationId: "PrivateCheckpointHealth_GetSpecifiedPrivateCheckpointHealth"
       parameters:
-      - name: "checkpointName"
+      - name: "filter"
         in: "query"
-        description: "The name/filter for the specified private checkpoints."
         required: false
         type: "string"
         x-nullable: true
-        x-exportParamName: "CheckpointName"
+        x-exportParamName: "Filter"
         x-optionalDataType: "String"
+      security:
+      - basicauth:
+        - ""
+      responses:
+        "200":
+          description: "The request completed successfully."
+          schema:
+            $ref: "#/definitions/CheckpointsHealth"
+          x-nullable: false
+        "400":
+          description: "The request failed."
+          schema:
+            $ref: "#/definitions/MessageList"
+          x-nullable: false
+        "404":
+          description: "No private checkpoints could be found."
+          schema:
+            $ref: "#/definitions/MessageList"
+          x-nullable: false
+  /PrivateCheckpointHealthForRegion:
+    get:
+      tags:
+      - "Checkpoint"
+      summary: "Returns the status of the private checkpoints in the given region."
+      operationId: "PrivateCheckpointHealth_GetPrivateCheckpointHealthForRegion"
+      parameters:
+      - name: "regionId"
+        in: "query"
+        description: "The id of the region."
+        required: true
+        type: "integer"
+        format: "int32"
+        x-nullable: false
+        x-exportParamName: "RegionId"
       security:
       - basicauth:
         - ""
@@ -7413,17 +7446,17 @@ definitions:
         type: "integer"
         description: "The time offset for Daylight Saving Time in minutes"
       DaylightSavingStart:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The Daylight Saving start date/time"
       DaylightSavingEnd:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The Daylight Saving end date/time"
     description: "Time zone available in Uptrends"
     example:
       OffsetFromUtc: 6
       Description: "Description"
-      DaylightSavingStart: "2022-08-24T13:42:18"
-      DaylightSavingEnd: "2022-08-24T13:42:18"
+      DaylightSavingStart: "2023-01-24T13:42:18"
+      DaylightSavingEnd: "2023-01-24T13:42:18"
       TimezoneId: 0
       HasDaylightSaving: true
       DaylightSavingOffset: 1
@@ -7443,10 +7476,18 @@ definitions:
     type: "object"
     required:
     - "HealthyServers"
+    - "NumberOfServers"
+    - "UnhealthyServers"
     properties:
       HealthyServers:
         type: "integer"
         description: "The number of healthy servers"
+      UnhealthyServers:
+        type: "integer"
+        description: "The number of unhealthy servers"
+      NumberOfServers:
+        type: "integer"
+        description: "The number of servers"
       Servers:
         type: "array"
         description: "The health of each server"
@@ -7454,6 +7495,8 @@ definitions:
           $ref: "#/definitions/ServerHealth"
     description: "CheckpointsHealth"
     example:
+      NumberOfServers: 1
+      UnhealthyServers: 6
       Servers:
       - Status: "Status"
         StatusDetails: {}
@@ -7482,7 +7525,7 @@ definitions:
     type: "object"
     properties:
       LastOnlineUtc:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The UTC time the server was last online"
     description: "ServerStatusDetails"
   RumWebsite:
@@ -7653,7 +7696,7 @@ definitions:
       AccountId:
         type: "string"
       ExpirationDate:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
       MonitorQuota:
         $ref: "#/definitions/MonitorQuota"
       OperatorQuota:
@@ -7666,7 +7709,7 @@ definitions:
         Operators: 4
         OperatorsInUse: 7
       AccountId: "AccountId"
-      ExpirationDate: "2022-08-24T13:42:18"
+      ExpirationDate: "2023-01-24T13:42:18"
       MonitorQuota:
         ApiMonitoringCreditsInUse: 2
         TransactionCredits: 7
@@ -7837,11 +7880,14 @@ definitions:
     example:
       DashboardGuid: "DashboardGuid"
       DashboardFilter:
+        CheckpointRegions:
+        - 6
+        - 6
         SelectedPeriod:
           SelectedPeriodType: {}
           PresetPeriod: {}
-          Start: "2022-08-24T13:42:18"
-          End: "2022-08-24T13:42:18"
+          Start: "2023-01-24T13:42:18"
+          End: "2023-01-24T13:42:18"
         Checkpoints:
         - 0
         - 0
@@ -7872,12 +7918,19 @@ definitions:
         type: "array"
         items:
           type: "integer"
+      CheckpointRegions:
+        type: "array"
+        items:
+          type: "integer"
     example:
+      CheckpointRegions:
+      - 6
+      - 6
       SelectedPeriod:
         SelectedPeriodType: {}
         PresetPeriod: {}
-        Start: "2022-08-24T13:42:18"
-        End: "2022-08-24T13:42:18"
+        Start: "2023-01-24T13:42:18"
+        End: "2023-01-24T13:42:18"
       Checkpoints:
       - 0
       - 0
@@ -7893,19 +7946,19 @@ definitions:
       SelectedPeriodType:
         $ref: "#/definitions/SelectedPeriod_SelectedPeriodType"
       Start:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The start of a custom period (can't be used together with the\
           \ SelectedPeriodType parameter)"
       End:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The end of a custom period"
       PresetPeriod:
         $ref: "#/definitions/SelectedPeriod_PresetPeriod"
     example:
       SelectedPeriodType: {}
       PresetPeriod: {}
-      Start: "2022-08-24T13:42:18"
-      End: "2022-08-24T13:42:18"
+      Start: "2023-01-24T13:42:18"
+      End: "2023-01-24T13:42:18"
   SelectedPeriodType:
     type: "string"
     description: ""
@@ -8328,17 +8381,17 @@ definitions:
       Description:
         type: "string"
       From:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
       Until:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
       Hash:
         type: "string"
     example:
       Description: "Description"
-      From: "2022-08-24T13:42:18"
+      From: "2023-01-24T13:42:18"
       Hash: "Hash"
       ExclusionPeriodId: 0
-      Until: "2022-08-24T13:42:18"
+      Until: "2023-01-24T13:42:18"
   StatisticsResponse:
     type: "object"
     properties:
@@ -8472,9 +8525,9 @@ definitions:
     - "StartDateTime"
     properties:
       StartDateTime:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
       EndDateTime:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
       Alerts:
         type: "integer"
         format: "int32"
@@ -8570,7 +8623,7 @@ definitions:
     type: "object"
     properties:
       Timestamp:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
       Period:
         $ref: "#/definitions/PeriodMetaData"
   PeriodMetaData:
@@ -8732,10 +8785,10 @@ definitions:
         format: "guid"
         description: "The monitor identifier."
       Timestamp:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "Date/time stamp of the alert."
       FirstError:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "Date/time stamp of the first monitor check."
       MonitorCheckId:
         type: "integer"
@@ -8994,7 +9047,7 @@ definitions:
       ErrorLevel:
         $ref: "#/definitions/MonitorStatusAttributes_ErrorLevel"
       LastCheck:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "Last checked timeStamp for this monitor"
       CheckpointId:
         type: "integer"
@@ -9638,17 +9691,11 @@ definitions:
     - "PrimaryServer"
     - "HighAvailability"
     - "FiddlerProxy"
-    - "InternetExplorer"
-    - "Firefox"
-    - "PhantomJS"
     x-enumNames:
     - "IPv6"
     - "PrimaryServer"
     - "HighAvailability"
     - "FiddlerProxy"
-    - "InternetExplorer"
-    - "Firefox"
-    - "PhantomJS"
   ListStringResponse:
     type: "object"
     properties:
@@ -9770,11 +9817,11 @@ definitions:
       ScheduleMode:
         $ref: "#/definitions/MaintenancePeriod_ScheduleMode"
       StartDateTime:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The start date/time for this schedule (for one-time schedules\
           \ only)"
       EndDateTime:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The end date/time for this maintenance period (for one-time\
           \ maintenance periods only)"
       WeekDay:
@@ -9797,10 +9844,10 @@ definitions:
         description: "The description for this maintenance period"
     example:
       WeekDay: {}
-      StartDateTime: "2022-08-24T13:42:18"
+      StartDateTime: "2023-01-24T13:42:18"
       Description: "Description"
       EndTime: "EndTime"
-      EndDateTime: "2022-08-24T13:42:18"
+      EndDateTime: "2023-01-24T13:42:18"
       ScheduleMode: {}
       StartTime: "StartTime"
       MonthDay: 6
@@ -10045,11 +10092,11 @@ definitions:
       ScheduleMode:
         $ref: "#/definitions/MaintenancePeriod_ScheduleMode"
       StartDateTime:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The start date/time for this schedule (for one-time schedules\
           \ only)"
       EndDateTime:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The end date/time for this maintenance period (for one-time\
           \ maintenance periods only)"
       WeekDay:
@@ -10067,9 +10114,9 @@ definitions:
         description: "The end time of this maintenance period"
     example:
       WeekDay: {}
-      StartDateTime: "2022-08-24T13:42:18"
+      StartDateTime: "2023-01-24T13:42:18"
       EndTime: "EndTime"
-      EndDateTime: "2022-08-24T13:42:18"
+      EndDateTime: "2023-01-24T13:42:18"
       ScheduleMode: {}
       StartTime: "StartTime"
       MonthDay: 6
@@ -10307,7 +10354,7 @@ definitions:
         format: "guid"
         description: "Monitor identifier"
       Timestamp:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "Date/time stamp of the check"
       ErrorCode:
         type: "integer"
@@ -10493,6 +10540,9 @@ definitions:
       ResponseHeaders:
         type: "string"
         description: "The HTTP response headers retrieved from the target "
+      Url:
+        type: "string"
+        description: "The URL of the HTTP Check. "
     description: "Http details attributes"
   MsaDetailsResponse:
     type: "object"
@@ -10674,9 +10724,9 @@ definitions:
       Description:
         type: "string"
       StartUtc:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
       EndUtc:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
       ElapsedMilliseconds:
         type: "integer"
         format: "int64"
@@ -11138,28 +11188,10 @@ definitions:
       Hash:
         type: "string"
         description: "Hash corresponding with this monitor."
-      SelfServiceTransactionScript:
-        type: "string"
-      CustomMetrics:
-        type: "array"
-        items:
-          $ref: "#/definitions/CustomMetric"
-      BlockUptrendsRum:
-        type: "boolean"
-      BlockGoogleAnalytics:
-        type: "boolean"
-      BlockUrls:
-        type: "array"
-        items:
-          type: "string"
       RequestHeaders:
         type: "array"
         items:
           $ref: "#/definitions/RequestHeader"
-      DnsBypasses:
-        type: "array"
-        items:
-          $ref: "#/definitions/DnsBypass"
       UserAgent:
         type: "string"
       LoadTimeLimit1:
@@ -11176,10 +11208,27 @@ definitions:
         type: "string"
       AuthenticationType:
         $ref: "#/definitions/ApiHttpAuthenticationType"
-      BrowserType:
-        $ref: "#/definitions/BrowserType"
-      BrowserWindowDimensions:
-        $ref: "#/definitions/BrowserWindowDimensions"
+      CheckCertificateErrors:
+        type: "boolean"
+      IpVersion:
+        $ref: "#/definitions/IpVersion"
+      AlertOnMinimumBytes:
+        type: "boolean"
+      MinimumBytes:
+        type: "integer"
+        format: "int32"
+      HttpMethod:
+        $ref: "#/definitions/HttpMethod"
+      TlsVersion:
+        $ref: "#/definitions/TlsVersion"
+      RequestBody:
+        type: "string"
+      MatchPatterns:
+        type: "array"
+        items:
+          $ref: "#/definitions/PatternMatch"
+      Url:
+        type: "string"
       Credits:
         type: "integer"
         format: "int32"
@@ -11195,14 +11244,32 @@ definitions:
         type: "array"
         items:
           $ref: "#/definitions/UserDefinedFunction"
+      CustomMetrics:
+        type: "array"
+        items:
+          $ref: "#/definitions/CustomMetric"
+      SelfServiceTransactionScript:
+        type: "string"
       MultiStepApiTransactionScript:
         type: "string"
+      BlockGoogleAnalytics:
+        type: "boolean"
+      BlockUptrendsRum:
+        type: "boolean"
+      BlockUrls:
+        type: "array"
+        items:
+          type: "string"
       Password:
         type: "string"
       NameForPhoneAlerts:
         type: "string"
       ThrottlingOptions:
         $ref: "#/definitions/ThrottlingOptions"
+      DnsBypasses:
+        type: "array"
+        items:
+          $ref: "#/definitions/DnsBypass"
       TransactionStepDefinition:
         $ref: "#/definitions/Monitor_TransactionStepDefinition"
       CertificateName:
@@ -11224,8 +11291,6 @@ definitions:
       CertificateExpirationWarningDays:
         type: "integer"
         format: "int32"
-      CheckCertificateErrors:
-        type: "boolean"
       AlertOnMaximumBytes:
         type: "boolean"
       MaximumBytes:
@@ -11259,13 +11324,6 @@ definitions:
       Port:
         type: "integer"
         format: "int32"
-      IpVersion:
-        $ref: "#/definitions/IpVersion"
-      AlertOnMinimumBytes:
-        type: "boolean"
-      MinimumBytes:
-        type: "integer"
-        format: "int32"
       DatabaseName:
         type: "string"
       NetworkAddress:
@@ -11276,23 +11334,15 @@ definitions:
         $ref: "#/definitions/SftpAction"
       SftpActionPath:
         type: "string"
-      HttpMethod:
-        $ref: "#/definitions/HttpMethod"
       ExpectedHttpStatusCode:
         type: "integer"
         format: "int32"
       ExpectedHttpStatusCodeSpecified:
         type: "boolean"
-      TlsVersion:
-        $ref: "#/definitions/TlsVersion"
-      RequestBody:
-        type: "string"
-      MatchPatterns:
-        type: "array"
-        items:
-          $ref: "#/definitions/PatternMatch"
-      Url:
-        type: "string"
+      BrowserType:
+        $ref: "#/definitions/BrowserType"
+      BrowserWindowDimensions:
+        $ref: "#/definitions/BrowserWindowDimensions"
       UseConcurrentMonitoring:
         type: "boolean"
       ConcurrentUnconfirmedErrorThreshold:
@@ -11305,6 +11355,8 @@ definitions:
         type: "array"
         items:
           $ref: "#/definitions/ErrorCondition"
+      CreatedDate:
+        example: "2023-01-24T13:42:18"
     example:
       ThrottlingOptions:
         ThrottlingSpeedUp: 1
@@ -11316,22 +11368,22 @@ definitions:
       - "BlockUrls"
       - "BlockUrls"
       BrowserWindowDimensions:
-        PixelRatio: 3
+        PixelRatio: 9
         MobileDevice: "MobileDevice"
-        Height: 9
+        Height: 8
         IsMobile: true
-        Width: 7
+        Width: 6
       MonitorType: {}
       MatchPatterns:
       - Pattern: "Pattern"
         DateTime:
-          MaxDifference: 9
-          OffsetUTC: 8
+          MaxDifference: 3
+          OffsetUTC: 9
         IsPositive: true
       - Pattern: "Pattern"
         DateTime:
-          MaxDifference: 9
-          OffsetUTC: 8
+          MaxDifference: 3
+          OffsetUTC: 9
         IsPositive: true
       Port: 9
       CheckCertificateErrors: true
@@ -11352,11 +11404,6 @@ definitions:
       AuthenticationType: {}
       IpVersion: {}
       CertificateIssuerName: "CertificateIssuerName"
-      DnsBypasses:
-      - Target: "Target"
-        Source: "Source"
-      - Target: "Target"
-        Source: "Source"
       UserDefinedFunctions:
       - Type: {}
         Mappings:
@@ -11382,6 +11429,11 @@ definitions:
         HashKey: "HashKey"
         Name: "Name"
         HashAlgorithm: {}
+      DnsBypasses:
+      - Target: "Target"
+        Source: "Source"
+      - Target: "Target"
+        Source: "Source"
       IgnoreExternalElements: true
       DatabaseName: "DatabaseName"
       GenerateAlert: true
@@ -11407,6 +11459,7 @@ definitions:
         Effect: {}
         ErrorConditionType: {}
       ConcurrentConfirmedErrorThreshold: 3
+      CreatedDate: "2023-01-24T13:42:18"
       DnsExpectedResult: "DnsExpectedResult"
       HttpMethod: {}
       MaximumBytes: 1
@@ -11417,19 +11470,19 @@ definitions:
       AlertOnLoadTimeLimit1: true
       CertificateOrganizationalUnit: "CertificateOrganizationalUnit"
       AlertOnLoadTimeLimit2: true
-      MinimumBytes: 9
+      MinimumBytes: 7
+      Url: "Url"
       CustomMetrics:
       - VariableName: "VariableName"
         Name: "Name"
       - VariableName: "VariableName"
         Name: "Name"
-      Url: "Url"
       TransactionStepDefinition: {}
       SftpActionPath: "SftpActionPath"
       CertificateIssuerOrganizationalUnit: "CertificateIssuerOrganizationalUnit"
       NetworkAddress: "NetworkAddress"
       BrowserType: {}
-      ExpectedHttpStatusCode: 6
+      ExpectedHttpStatusCode: 9
       UserAgent: "UserAgent"
       CertificateFingerprint: "CertificateFingerprint"
       FailedObjectPercentage: 5
@@ -11442,8 +11495,8 @@ definitions:
       ExpectedHttpStatusCodeSpecified: true
       ConcurrentUnconfirmedErrorThreshold: 6
       Notes: "Notes"
-      Password: "Password"
       RequestBody: "RequestBody"
+      Password: "Password"
       CertificateOrganization: "CertificateOrganization"
       ElementMaximumSize: 4
       UseConcurrentMonitoring: true
@@ -11584,7 +11637,6 @@ definitions:
     - "Transaction"
     - "DNS"
     - "FullPageCheck"
-    - "RealBrowserCheck"
     - "Certificate"
     - "SFTP"
     - "MultiStepApi"
@@ -11604,7 +11656,6 @@ definitions:
     - "Transaction"
     - "DNS"
     - "FullPageCheck"
-    - "RealBrowserCheck"
     - "Certificate"
     - "SFTP"
     - "MultiStepApi"
@@ -11655,16 +11706,6 @@ definitions:
     - "Development"
     - "Staging"
     - "Production"
-  CustomMetric:
-    type: "object"
-    properties:
-      Name:
-        type: "string"
-      VariableName:
-        type: "string"
-    example:
-      VariableName: "VariableName"
-      Name: "Name"
   RequestHeader:
     type: "object"
     properties:
@@ -11675,16 +11716,6 @@ definitions:
     example:
       Value: "Value"
       Name: "Name"
-  DnsBypass:
-    type: "object"
-    properties:
-      Source:
-        type: "string"
-      Target:
-        type: "string"
-    example:
-      Target: "Target"
-      Source: "Source"
   ApiHttpAuthenticationType:
     type: "string"
     description: ""
@@ -11698,54 +11729,75 @@ definitions:
     - "Basic"
     - "NTLM"
     - "Digest"
-  BrowserType:
+  IpVersion:
     type: "string"
     description: ""
     enum:
-    - "IE"
-    - "Firefox"
-    - "Chrome"
-    - "Safari"
-    - "PhantomJS"
-    - "PhantomJS20"
-    - "ChromeWithExtraMetrics"
-    - "Edge"
+    - "IpV4"
+    - "IpV6"
     x-enumNames:
-    - "IE"
-    - "Firefox"
-    - "Chrome"
-    - "Safari"
-    - "PhantomJS"
-    - "PhantomJS20"
-    - "ChromeWithExtraMetrics"
-    - "Edge"
-  BrowserWindowDimensions:
+    - "IpV4"
+    - "IpV6"
+  HttpMethod:
+    type: "string"
+    description: ""
+    enum:
+    - "Get"
+    - "Post"
+    x-enumNames:
+    - "Get"
+    - "Post"
+  TlsVersion:
+    type: "string"
+    description: ""
+    enum:
+    - "Tls12"
+    - "Tls11"
+    - "Tls10"
+    - "Tls12_Tls11"
+    - "Tls11_Tls10"
+    - "Tls12_Tls11_Tls10"
+    - "Tls12_Tls11_Tls10_WithFallback"
+    x-enumNames:
+    - "Tls12"
+    - "Tls11"
+    - "Tls10"
+    - "Tls12_Tls11"
+    - "Tls11_Tls10"
+    - "Tls12_Tls11_Tls10"
+    - "Tls12_Tls11_Tls10_WithFallback"
+  PatternMatch:
     type: "object"
     required:
-    - "Height"
-    - "IsMobile"
-    - "PixelRatio"
-    - "Width"
+    - "IsPositive"
     properties:
-      IsMobile:
-        type: "boolean"
-      Width:
-        type: "integer"
-        format: "int32"
-      Height:
-        type: "integer"
-        format: "int32"
-      PixelRatio:
-        type: "integer"
-        format: "int32"
-      MobileDevice:
+      Pattern:
         type: "string"
+      IsPositive:
+        type: "boolean"
+      DateTime:
+        $ref: "#/definitions/DateTimePatternMatch"
     example:
-      PixelRatio: 3
-      MobileDevice: "MobileDevice"
-      Height: 9
-      IsMobile: true
-      Width: 7
+      Pattern: "Pattern"
+      DateTime:
+        MaxDifference: 3
+        OffsetUTC: 9
+      IsPositive: true
+  DateTimePatternMatch:
+    type: "object"
+    required:
+    - "MaxDifference"
+    - "OffsetUTC"
+    properties:
+      OffsetUTC:
+        type: "integer"
+        format: "int32"
+      MaxDifference:
+        type: "integer"
+        format: "int32"
+    example:
+      MaxDifference: 3
+      OffsetUTC: 9
   PredefinedVariable:
     type: "object"
     properties:
@@ -12058,6 +12110,11 @@ definitions:
     - "LessThanOrEqual"
     - "GreaterThanOrEqual"
     - "IsNotEmpty"
+    - "IsEmpty"
+    - "IsNotNull"
+    - "IsNull"
+    - "DoesNotExist"
+    - "Exists"
     x-enumNames:
     - "Equal"
     - "DoesNotEqual"
@@ -12069,6 +12126,11 @@ definitions:
     - "LessThanOrEqual"
     - "GreaterThanOrEqual"
     - "IsNotEmpty"
+    - "IsEmpty"
+    - "IsNotNull"
+    - "IsNull"
+    - "DoesNotExist"
+    - "Exists"
   ApiAuthenticationInfo:
     type: "object"
     required:
@@ -12194,6 +12256,16 @@ definitions:
     - "HMACSHA1"
     - "HMACSHA256"
     - "HMACSHA512"
+  CustomMetric:
+    type: "object"
+    properties:
+      Name:
+        type: "string"
+      VariableName:
+        type: "string"
+    example:
+      VariableName: "VariableName"
+      Name: "Name"
   ThrottlingOptions:
     type: "object"
     properties:
@@ -12244,6 +12316,16 @@ definitions:
     - "_2G"
     - "_3G"
     - "_4G"
+  DnsBypass:
+    type: "object"
+    properties:
+      Source:
+        type: "string"
+      Target:
+        type: "string"
+    example:
+      Target: "Target"
+      Source: "Source"
   TransactionStepDefinition:
     type: "object"
     properties:
@@ -12330,15 +12412,6 @@ definitions:
     - "RootServer"
     - "AaaaRecord"
     - "SrvRecord"
-  IpVersion:
-    type: "string"
-    description: ""
-    enum:
-    - "IpV4"
-    - "IpV6"
-    x-enumNames:
-    - "IpV4"
-    - "IpV6"
   SftpAction:
     type: "string"
     description: ""
@@ -12352,66 +12425,44 @@ definitions:
     - "TestFileExists"
     - "TestFileDoesNotExist"
     - "DownLoadFile"
-  HttpMethod:
+  BrowserType:
     type: "string"
     description: ""
     enum:
-    - "Get"
-    - "Post"
+    - "Chrome"
+    - "ChromeWithExtraMetrics"
+    - "Edge"
     x-enumNames:
-    - "Get"
-    - "Post"
-  TlsVersion:
-    type: "string"
-    description: ""
-    enum:
-    - "Tls12"
-    - "Tls11"
-    - "Tls10"
-    - "Tls12_Tls11"
-    - "Tls11_Tls10"
-    - "Tls12_Tls11_Tls10"
-    - "Tls12_Tls11_Tls10_WithFallback"
-    x-enumNames:
-    - "Tls12"
-    - "Tls11"
-    - "Tls10"
-    - "Tls12_Tls11"
-    - "Tls11_Tls10"
-    - "Tls12_Tls11_Tls10"
-    - "Tls12_Tls11_Tls10_WithFallback"
-  PatternMatch:
+    - "Chrome"
+    - "ChromeWithExtraMetrics"
+    - "Edge"
+  BrowserWindowDimensions:
     type: "object"
     required:
-    - "IsPositive"
+    - "Height"
+    - "IsMobile"
+    - "PixelRatio"
+    - "Width"
     properties:
-      Pattern:
-        type: "string"
-      IsPositive:
+      IsMobile:
         type: "boolean"
-      DateTime:
-        $ref: "#/definitions/DateTimePatternMatch"
-    example:
-      Pattern: "Pattern"
-      DateTime:
-        MaxDifference: 9
-        OffsetUTC: 8
-      IsPositive: true
-  DateTimePatternMatch:
-    type: "object"
-    required:
-    - "MaxDifference"
-    - "OffsetUTC"
-    properties:
-      OffsetUTC:
+      Width:
         type: "integer"
         format: "int32"
-      MaxDifference:
+      Height:
         type: "integer"
         format: "int32"
+      PixelRatio:
+        type: "integer"
+        format: "int32"
+      MobileDevice:
+        type: "string"
     example:
-      MaxDifference: 9
-      OffsetUTC: 8
+      PixelRatio: 9
+      MobileDevice: "MobileDevice"
+      Height: 8
+      IsMobile: true
+      Width: 6
   ErrorCondition:
     type: "object"
     required:
@@ -12489,24 +12540,24 @@ definitions:
     enum:
     - "Info"
     - "Warning"
-    - "Severe"
+    - "Error"
     x-enumNames:
     - "Info"
     - "Warning"
-    - "Severe"
+    - "Error"
   ErrorConditionMatchType:
     type: "string"
     description: ""
     enum:
-    - "Positive"
-    - "Negative"
-    - "PositiveRegex"
-    - "NegativeRegex"
+    - "ErrorWhenContains"
+    - "ErrorWhenNotContains"
+    - "ErrorWhenContainsRegex"
+    - "ErrorWhenNotContainsRegex"
     x-enumNames:
-    - "Positive"
-    - "Negative"
-    - "PositiveRegex"
-    - "NegativeRegex"
+    - "ErrorWhenContains"
+    - "ErrorWhenNotContains"
+    - "ErrorWhenContainsRegex"
+    - "ErrorWhenNotContainsRegex"
   ErrorConditionEffect:
     type: "string"
     description: ""
@@ -12669,10 +12720,10 @@ definitions:
         type: "string"
         description: "The issuer of this certificate"
       NotBefore:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The start date of this certificate"
       NotAfter:
-        example: "2022-08-24T13:42:18"
+        example: "2023-01-24T13:42:18"
         description: "The certificate expiry date"
       Password:
         type: "string"

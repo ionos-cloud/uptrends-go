@@ -10,6 +10,6 @@
 package uptrends
 
 type IntegrationServiceMap struct {
-	MonitorGuid            string `json:"MonitorGuid"`
+	MonitorGuid string `json:"MonitorGuid"`
 	IntegrationServiceGuid string `json:"IntegrationServiceGuid"`
 }

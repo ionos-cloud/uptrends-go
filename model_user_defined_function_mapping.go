@@ -10,6 +10,6 @@
 package uptrends
 
 type UserDefinedFunctionMapping struct {
-	Key   string `json:"Key,omitempty"`
+	Key string `json:"Key,omitempty"`
 	Value string `json:"Value,omitempty"`
 }

@@ -8,12 +8,11 @@
  */
 
 package uptrends
-
-// OperatorSetupMode :
+// OperatorSetupMode : 
 type OperatorSetupMode string
 
 // List of OperatorSetupMode
 const (
-	MANUAL     OperatorSetupMode = "Manual"
+	MANUAL OperatorSetupMode = "Manual"
 	INVITATION OperatorSetupMode = "Invitation"
 )

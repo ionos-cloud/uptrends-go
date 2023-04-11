@@ -10,4 +10,5 @@
 package uptrends
 
 // The schedule mode (one time, daily, weekly, monthly)
-type MaintenancePeriodScheduleMode struct{}
+type MaintenancePeriodScheduleMode struct {
+}

@@ -11,7 +11,8 @@ package uptrends
 
 type DashboardFilter struct {
 	SelectedPeriod *SelectedPeriod `json:"SelectedPeriod,omitempty"`
-	Monitors       []string        `json:"Monitors,omitempty"`
-	MonitorGroups  []string        `json:"MonitorGroups,omitempty"`
-	Checkpoints    []int32         `json:"Checkpoints,omitempty"`
+	Monitors []string `json:"Monitors,omitempty"`
+	MonitorGroups []string `json:"MonitorGroups,omitempty"`
+	Checkpoints []int32 `json:"Checkpoints,omitempty"`
+	CheckpointRegions []int32 `json:"CheckpointRegions,omitempty"`
 }

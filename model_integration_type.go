@@ -10,4 +10,5 @@
 package uptrends
 
 // Type of Integration in Alert Definition Escalation Level
-type IntegrationType struct{}
+type IntegrationType struct {
+}

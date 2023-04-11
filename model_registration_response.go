@@ -17,7 +17,7 @@ type RegistrationResponse struct {
 	// The Uptrends Account Id for which the new API account was created
 	AccountId string `json:"AccountId,omitempty"`
 	// The Uptrends Operator on behalf of whom the new API account was created
-	OperatorName string          `json:"OperatorName,omitempty"`
-	Status       *RegisterStatus `json:"status"`
-	Message      string          `json:"message,omitempty"`
+	OperatorName string `json:"OperatorName,omitempty"`
+	Status *RegisterStatus `json:"status"`
+	Message string `json:"message,omitempty"`
 }

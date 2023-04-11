@@ -8,12 +8,11 @@
  */
 
 package uptrends
-
-// SortDirection :
+// SortDirection : 
 type SortDirection string
 
 // List of SortDirection
 const (
-	ASCENDING  SortDirection = "Ascending"
+	ASCENDING SortDirection = "Ascending"
 	DESCENDING SortDirection = "Descending"
 )

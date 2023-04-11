@@ -11,7 +11,7 @@ package uptrends
 
 type Statistics struct {
 	Attributes *StatisticsAttributes `json:"Attributes,omitempty"`
-	// Identifier
+	// Identifier 
 	Id string `json:"Id,omitempty"`
 	// Object type
 	Type_ string `json:"Type,omitempty"`

@@ -8,25 +8,24 @@
  */
 
 package uptrends
-
 // RumMetric : Defines a RUM metric.
 type RumMetric string
 
 // List of RumMetric
 const (
-	PAGE_VIEWS         RumMetric = "PageViews"
-	LOAD_TIME          RumMetric = "LoadTime"
+	PAGE_VIEWS RumMetric = "PageViews"
+	LOAD_TIME RumMetric = "LoadTime"
 	TIME_TO_FIRST_BYTE RumMetric = "TimeToFirstByte"
-	PAGE_READY_TIME    RumMetric = "PageReadyTime"
-	NETWORK_DURATION   RumMetric = "NetworkDuration"
-	REDIRECT_DURATION  RumMetric = "RedirectDuration"
-	DNS_DURATION       RumMetric = "DnsDuration"
-	CONNECT_DURATION   RumMetric = "ConnectDuration"
-	BACKEND_DURATION   RumMetric = "BackendDuration"
-	SEND_DURATION      RumMetric = "SendDuration"
-	RECEIVE_DURATION   RumMetric = "ReceiveDuration"
+	PAGE_READY_TIME RumMetric = "PageReadyTime"
+	NETWORK_DURATION RumMetric = "NetworkDuration"
+	REDIRECT_DURATION RumMetric = "RedirectDuration"
+	DNS_DURATION RumMetric = "DnsDuration"
+	CONNECT_DURATION RumMetric = "ConnectDuration"
+	BACKEND_DURATION RumMetric = "BackendDuration"
+	SEND_DURATION RumMetric = "SendDuration"
+	RECEIVE_DURATION RumMetric = "ReceiveDuration"
 	FRONT_END_DURATION RumMetric = "FrontEndDuration"
-	DOM_DURATION       RumMetric = "DomDuration"
-	RENDER_DURATION    RumMetric = "RenderDuration"
-	DOWNLOAD_TIME      RumMetric = "DownloadTime"
+	DOM_DURATION RumMetric = "DomDuration"
+	RENDER_DURATION RumMetric = "RenderDuration"
+	DOWNLOAD_TIME RumMetric = "DownloadTime"
 )

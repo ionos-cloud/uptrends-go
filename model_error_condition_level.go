@@ -10,4 +10,5 @@
 package uptrends
 
 // The level of this error conditions (not used in all types)
-type ErrorConditionLevel struct{}
+type ErrorConditionLevel struct {
+}

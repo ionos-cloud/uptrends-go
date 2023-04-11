@@ -13,7 +13,7 @@ type Integration struct {
 	// Guid of Integration in Alert Definition Escalation Level
 	IntegrationGuid string `json:"IntegrationGuid"`
 	// Name of Integration in Alert Definition Escalation Level
-	Name  string           `json:"Name,omitempty"`
+	Name string `json:"Name,omitempty"`
 	Type_ *IntegrationType `json:"Type"`
 	// Extra emailadresses for this integration (if type == email)
 	ExtraEmailAddresses string `json:"ExtraEmailAddresses,omitempty"`
@@ -21,5 +21,5 @@ type Integration struct {
 	StatusHubServiceList []IntegrationServiceMap `json:"StatusHubServiceList,omitempty"`
 	// All integrations services.
 	IntegrationServices []string `json:"IntegrationServices,omitempty"`
-	Hash                string   `json:"Hash,omitempty"`
+	Hash string `json:"Hash,omitempty"`
 }

@@ -8,14 +8,14 @@
  */
 
 package uptrends
-
-// VaultItemTypes :
+// VaultItemTypes : 
 type VaultItemTypes string
 
 // List of VaultItemTypes
 const (
-	CREDENTIAL_SET      VaultItemTypes = "CredentialSet"
+	CREDENTIAL_SET VaultItemTypes = "CredentialSet"
+	CERTIFICATE VaultItemTypes = "Certificate"
 	CERTIFICATE_ARCHIVE VaultItemTypes = "CertificateArchive"
-	FILE                VaultItemTypes = "File"
-	ONE_TIME_PASSWORD   VaultItemTypes = "OneTimePassword"
+	FILE VaultItemTypes = "File"
+	ONE_TIME_PASSWORD VaultItemTypes = "OneTimePassword"
 )

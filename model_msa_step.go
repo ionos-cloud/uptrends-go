@@ -10,24 +10,24 @@
 package uptrends
 
 type MsaStep struct {
-	Url    string       `json:"Url,omitempty"`
+	Url string `json:"Url,omitempty"`
 	Method *HttpMethods `json:"Method"`
 	// The body that will be send in the request. Only used if BodyType equals Raw
-	Body     string           `json:"Body,omitempty"`
+	Body string `json:"Body,omitempty"`
 	BodyType *MsaStepBodyType `json:"BodyType,omitempty"`
 	// The guid of the vaultfile that will be send in the request. Only used if BodyType equals VaultFiles
-	VaultFileId                string                  `json:"VaultFileId,omitempty"`
-	RequestHeaders             []ApiHttpHeaderValue    `json:"RequestHeaders,omitempty"`
-	Variables                  []ApiVariableDefinition `json:"Variables,omitempty"`
-	Assertions                 []ApiAssertion          `json:"Assertions,omitempty"`
-	Name                       string                  `json:"Name,omitempty"`
-	UseFixedClientCertificate  bool                    `json:"UseFixedClientCertificate"`
-	Authentication             *ApiAuthenticationInfo  `json:"Authentication,omitempty"`
-	IgnoreCertificateErrors    bool                    `json:"IgnoreCertificateErrors"`
-	ClientCertificateVaultItem string                  `json:"ClientCertificateVaultItem,omitempty"`
-	Delay                      int32                   `json:"Delay"`
-	StepType                   *MsaStepType            `json:"StepType"`
-	RetryUntilSuccessful       bool                    `json:"RetryUntilSuccessful"`
-	MaxAttempts                int32                   `json:"MaxAttempts"`
-	RetryWaitMilliseconds      int32                   `json:"RetryWaitMilliseconds,omitempty"`
+	VaultFileId string `json:"VaultFileId,omitempty"`
+	RequestHeaders []ApiHttpHeaderValue `json:"RequestHeaders,omitempty"`
+	Variables []ApiVariableDefinition `json:"Variables,omitempty"`
+	Assertions []ApiAssertion `json:"Assertions,omitempty"`
+	Name string `json:"Name,omitempty"`
+	UseFixedClientCertificate bool `json:"UseFixedClientCertificate"`
+	Authentication *ApiAuthenticationInfo `json:"Authentication,omitempty"`
+	IgnoreCertificateErrors bool `json:"IgnoreCertificateErrors"`
+	ClientCertificateVaultItem string `json:"ClientCertificateVaultItem,omitempty"`
+	Delay int32 `json:"Delay"`
+	StepType *MsaStepType `json:"StepType"`
+	RetryUntilSuccessful bool `json:"RetryUntilSuccessful"`
+	MaxAttempts int32 `json:"MaxAttempts"`
+	RetryWaitMilliseconds int32 `json:"RetryWaitMilliseconds,omitempty"`
 }

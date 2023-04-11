@@ -14,8 +14,8 @@ type ErrorCondition struct {
 	// The value of this error conditions (not used in all types)
 	Value string `json:"Value,omitempty"`
 	// The percentage of this error conditions (not used in all types)
-	Percentage string                   `json:"Percentage,omitempty"`
-	Level      *ErrorConditionLevel     `json:"Level,omitempty"`
-	MatchType  *ErrorConditionMatchType `json:"MatchType,omitempty"`
-	Effect     *ErrorConditionEffect    `json:"Effect,omitempty"`
+	Percentage string `json:"Percentage,omitempty"`
+	Level *ErrorConditionLevel `json:"Level,omitempty"`
+	MatchType *ErrorConditionMatchType `json:"MatchType,omitempty"`
+	Effect *ErrorConditionEffect `json:"Effect,omitempty"`
 }

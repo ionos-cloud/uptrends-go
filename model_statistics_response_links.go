@@ -10,4 +10,5 @@
 package uptrends
 
 // Links with reference to self and next data set
-type StatisticsResponseLinks struct{}
+type StatisticsResponseLinks struct {
+}

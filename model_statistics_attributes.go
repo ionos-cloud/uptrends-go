@@ -9,5 +9,6 @@
 
 package uptrends
 
-// Object attributes
-type StatisticsAttributes struct{}
+// Object attributes 
+type StatisticsAttributes struct {
+}

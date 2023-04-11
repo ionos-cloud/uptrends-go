@@ -13,6 +13,10 @@ package uptrends
 type CheckpointsHealth struct {
 	// The number of healthy servers
 	HealthyServers int32 `json:"HealthyServers"`
+	// The number of unhealthy servers
+	UnhealthyServers int32 `json:"UnhealthyServers"`
+	// The number of servers
+	NumberOfServers int32 `json:"NumberOfServers"`
 	// The health of each server
 	Servers []ServerHealth `json:"Servers,omitempty"`
 }

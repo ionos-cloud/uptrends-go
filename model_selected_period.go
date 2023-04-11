@@ -14,6 +14,6 @@ type SelectedPeriod struct {
 	// The start of a custom period (can't be used together with the SelectedPeriodType parameter)
 	Start interface{} `json:"Start,omitempty"`
 	// The end of a custom period
-	End          interface{}                 `json:"End,omitempty"`
+	End interface{} `json:"End,omitempty"`
 	PresetPeriod *SelectedPeriodPresetPeriod `json:"PresetPeriod,omitempty"`
 }

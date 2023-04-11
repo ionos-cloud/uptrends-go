@@ -8,12 +8,11 @@
  */
 
 package uptrends
-
-// SelectedPeriodType :
+// SelectedPeriodType : 
 type SelectedPeriodType string
 
 // List of SelectedPeriodType
 const (
-	PRESET_PERIOD  SelectedPeriodType = "PresetPeriod"
+	PRESET_PERIOD SelectedPeriodType = "PresetPeriod"
 	SPECIFIC_DATES SelectedPeriodType = "SpecificDates"
 )

@@ -8,8 +8,7 @@
  */
 
 package uptrends
-
-// IpVersion :
+// IpVersion : 
 type IpVersion string
 
 // List of IpVersion

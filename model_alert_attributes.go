@@ -9,7 +9,7 @@
 
 package uptrends
 
-// Alert attributes
+// Alert attributes 
 type AlertAttributes struct {
 	AlertType *AlertAttributesAlertType `json:"AlertType"`
 	// The monitor identifier.

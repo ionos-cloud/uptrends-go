@@ -10,4 +10,5 @@
 package uptrends
 
 // The error level for the monitor status
-type MonitorStatusAttributesErrorLevel struct{}
+type MonitorStatusAttributesErrorLevel struct {
+}

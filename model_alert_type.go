@@ -15,6 +15,5 @@ type AlertType string
 // List of AlertType
 const (
 	OK       AlertType = "Ok"
-	ERROR_   AlertType = "Error"
 	REMINDER AlertType = "Reminder"
 )

@@ -8,13 +8,12 @@
  */
 
 package uptrends
-
-// MonitorAuthorizationType :
+// MonitorAuthorizationType : 
 type MonitorAuthorizationType string
 
 // List of MonitorAuthorizationType
 const (
 	VIEW_MONITOR_DATA MonitorAuthorizationType = "ViewMonitorData"
-	VIEW_MONITOR      MonitorAuthorizationType = "ViewMonitor"
-	EDIT_MONITOR      MonitorAuthorizationType = "EditMonitor"
+	VIEW_MONITOR MonitorAuthorizationType = "ViewMonitor"
+	EDIT_MONITOR MonitorAuthorizationType = "EditMonitor"
 )

@@ -10,4 +10,5 @@
 package uptrends
 
 // The requested time period.
-type SelectedPeriodPresetPeriod struct{}
+type SelectedPeriodPresetPeriod struct {
+}

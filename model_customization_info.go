@@ -10,14 +10,14 @@
 package uptrends
 
 type CustomizationInfo struct {
-	MainColor                    string         `json:"MainColor,omitempty"`
-	BackgroundColor              string         `json:"BackgroundColor,omitempty"`
-	TextColor                    string         `json:"TextColor,omitempty"`
-	TitleText                    string         `json:"TitleText,omitempty"`
-	FooterText                   string         `json:"FooterText,omitempty"`
-	MonitorNameOverrideFieldName string         `json:"MonitorNameOverrideFieldName,omitempty"`
-	SortColumnsNewToOld          bool           `json:"SortColumnsNewToOld"`
-	SortRowsProperty             *SortOrderEnum `json:"SortRowsProperty"`
-	CommentTitle                 string         `json:"CommentTitle,omitempty"`
-	CommentText                  string         `json:"CommentText,omitempty"`
+	MainColor string `json:"MainColor,omitempty"`
+	BackgroundColor string `json:"BackgroundColor,omitempty"`
+	TextColor string `json:"TextColor,omitempty"`
+	TitleText string `json:"TitleText,omitempty"`
+	FooterText string `json:"FooterText,omitempty"`
+	MonitorNameOverrideFieldName string `json:"MonitorNameOverrideFieldName,omitempty"`
+	SortColumnsNewToOld bool `json:"SortColumnsNewToOld"`
+	SortRowsProperty *SortOrderEnum `json:"SortRowsProperty"`
+	CommentTitle string `json:"CommentTitle,omitempty"`
+	CommentText string `json:"CommentText,omitempty"`
 }

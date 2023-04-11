@@ -13,27 +13,4 @@ package uptrends
 type ApiAssertionSourceType string
 
 // List of ApiAssertionSourceType
-const (
-	NONE                        ApiAssertionSourceType = "None"
-	CONSTANT                    ApiAssertionSourceType = "Constant"
-	VARIABLE                    ApiAssertionSourceType = "Variable"
-	RESPONSE_STATUS_CODE        ApiAssertionSourceType = "ResponseStatusCode"
-	RESPONSE_STATUS_DESCRIPTION ApiAssertionSourceType = "ResponseStatusDescription"
-	RESPONSE_BODY_JSON          ApiAssertionSourceType = "ResponseBodyJson"
-	RESPONSE_COMPLETED          ApiAssertionSourceType = "ResponseCompleted"
-	RESPONSE_BODY_TEXT          ApiAssertionSourceType = "ResponseBodyText"
-	FAIL                        ApiAssertionSourceType = "Fail"
-	CONTENT_LENGTH_CALCULATED   ApiAssertionSourceType = "ContentLengthCalculated"
-	DURATION                    ApiAssertionSourceType = "Duration"
-	SUM                         ApiAssertionSourceType = "Sum"
-	CONCATENATION               ApiAssertionSourceType = "Concatenation"
-	TO_BASE64                   ApiAssertionSourceType = "ToBase64"
-	TO_SHA1_HEX                 ApiAssertionSourceType = "ToSHA1Hex"
-	TO_MD5_HEX                  ApiAssertionSourceType = "ToMD5Hex"
-	RESPONSE_BODY_XML           ApiAssertionSourceType = "ResponseBodyXml"
-	RESPONSE_HEADER             ApiAssertionSourceType = "ResponseHeader"
-	COOKIE                      ApiAssertionSourceType = "Cookie"
-	VARIABLES_RESOLVED          ApiAssertionSourceType = "VariablesResolved"
-	CUMULATIVE_DURATION         ApiAssertionSourceType = "CumulativeDuration"
-	RESPONSE_HAS_EXCEPTION      ApiAssertionSourceType = "ResponseHasException"
-)
+const ()

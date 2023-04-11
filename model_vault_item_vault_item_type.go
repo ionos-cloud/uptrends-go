@@ -10,4 +10,5 @@
 package uptrends
 
 // The vault item type
-type VaultItemVaultItemType struct{}
+type VaultItemVaultItemType struct {
+}

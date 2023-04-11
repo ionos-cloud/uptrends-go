@@ -10,7 +10,7 @@
 package uptrends
 
 type AssertionResultsInfo struct {
-	TotalAssertions  int32           `json:"TotalAssertions"`
-	PassedAssertions int32           `json:"PassedAssertions"`
-	AssertionInfos   []AssertionInfo `json:"AssertionInfos,omitempty"`
+	TotalAssertions int32 `json:"TotalAssertions"`
+	PassedAssertions int32 `json:"PassedAssertions"`
+	AssertionInfos []AssertionInfo `json:"AssertionInfos,omitempty"`
 }

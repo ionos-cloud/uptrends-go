@@ -10,4 +10,5 @@
 package uptrends
 
 // The authorization type
-type PspAuthorizationAuthorizationType struct{}
+type PspAuthorizationAuthorizationType struct {
+}

@@ -10,9 +10,9 @@
 package uptrends
 
 type ThrottlingOptions struct {
-	ThrottlingType      *ThrottlingType  `json:"ThrottlingType,omitempty"`
-	ThrottlingValue     *ThrottlingValue `json:"ThrottlingValue,omitempty"`
-	ThrottlingSpeedUp   int32            `json:"ThrottlingSpeedUp,omitempty"`
-	ThrottlingSpeedDown int32            `json:"ThrottlingSpeedDown,omitempty"`
-	ThrottlingLatency   int32            `json:"ThrottlingLatency,omitempty"`
+	ThrottlingType *ThrottlingType `json:"ThrottlingType,omitempty"`
+	ThrottlingValue *ThrottlingValue `json:"ThrottlingValue,omitempty"`
+	ThrottlingSpeedUp int32 `json:"ThrottlingSpeedUp,omitempty"`
+	ThrottlingSpeedDown int32 `json:"ThrottlingSpeedDown,omitempty"`
+	ThrottlingLatency int32 `json:"ThrottlingLatency,omitempty"`
 }

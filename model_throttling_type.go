@@ -14,7 +14,6 @@ type ThrottlingType string
 
 // List of ThrottlingType
 const (
-	INACTIVE  ThrottlingType = "Inactive"
 	BROWSER   ThrottlingType = "Browser"
 	SIMULATED ThrottlingType = "Simulated"
 )

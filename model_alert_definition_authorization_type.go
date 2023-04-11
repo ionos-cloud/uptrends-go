@@ -8,8 +8,7 @@
  */
 
 package uptrends
-
-// AlertDefinitionAuthorizationType :
+// AlertDefinitionAuthorizationType : 
 type AlertDefinitionAuthorizationType string
 
 // List of AlertDefinitionAuthorizationType

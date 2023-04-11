@@ -10,7 +10,7 @@
 package uptrends
 
 type SelectedCheckpoints struct {
-	Checkpoints      []int32 `json:"Checkpoints,omitempty"`
-	Regions          []int32 `json:"Regions,omitempty"`
+	Checkpoints []int32 `json:"Checkpoints,omitempty"`
+	Regions []int32 `json:"Regions,omitempty"`
 	ExcludeLocations []int32 `json:"ExcludeLocations,omitempty"`
 }

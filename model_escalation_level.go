@@ -10,15 +10,15 @@
 package uptrends
 
 type EscalationLevel struct {
-	EscalationMode      *EscalationMode `json:"EscalationMode,omitempty"`
-	Id                  int32           `json:"Id,omitempty"`
-	ThresholdErrorCount int32           `json:"ThresholdErrorCount,omitempty"`
-	ThresholdMinutes    int32           `json:"ThresholdMinutes,omitempty"`
-	IsActive            bool            `json:"IsActive,omitempty"`
-	Message             string          `json:"Message,omitempty"`
-	NumberOfReminders   int32           `json:"NumberOfReminders,omitempty"`
-	ReminderDelay       int32           `json:"ReminderDelay,omitempty"`
-	IncludeTraceRoute   bool            `json:"IncludeTraceRoute,omitempty"`
+	EscalationMode *EscalationMode `json:"EscalationMode,omitempty"`
+	Id int32 `json:"Id,omitempty"`
+	ThresholdErrorCount int32 `json:"ThresholdErrorCount,omitempty"`
+	ThresholdMinutes int32 `json:"ThresholdMinutes,omitempty"`
+	IsActive bool `json:"IsActive,omitempty"`
+	Message string `json:"Message,omitempty"`
+	NumberOfReminders int32 `json:"NumberOfReminders,omitempty"`
+	ReminderDelay int32 `json:"ReminderDelay,omitempty"`
+	IncludeTraceRoute bool `json:"IncludeTraceRoute,omitempty"`
 	// Hash corresponding with this escalation level.
 	Hash string `json:"Hash,omitempty"`
 }

@@ -11,6 +11,6 @@ package uptrends
 
 type AlertDefinitionOperator struct {
 	AlertDefinition string `json:"AlertDefinition"`
-	Escalationlevel int32  `json:"Escalationlevel"`
-	Operator        string `json:"Operator"`
+	Escalationlevel int32 `json:"Escalationlevel"`
+	Operator string `json:"Operator"`
 }

@@ -8,8 +8,7 @@
  */
 
 package uptrends
-
-// PspAuthorizationType :
+// PspAuthorizationType : 
 type PspAuthorizationType string
 
 // List of PSPAuthorizationType

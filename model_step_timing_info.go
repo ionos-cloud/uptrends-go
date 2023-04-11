@@ -10,12 +10,12 @@
 package uptrends
 
 type StepTimingInfo struct {
-	Description         string           `json:"Description,omitempty"`
-	StartUtc            interface{}      `json:"StartUtc"`
-	EndUtc              interface{}      `json:"EndUtc"`
-	ElapsedMilliseconds int64            `json:"ElapsedMilliseconds"`
-	DelayMilliseconds   int64            `json:"DelayMilliseconds"`
-	SubTimingInfos      []StepTimingInfo `json:"SubTimingInfos,omitempty"`
+	Description string `json:"Description,omitempty"`
+	StartUtc interface{} `json:"StartUtc"`
+	EndUtc interface{} `json:"EndUtc"`
+	ElapsedMilliseconds int64 `json:"ElapsedMilliseconds"`
+	DelayMilliseconds int64 `json:"DelayMilliseconds"`
+	SubTimingInfos []StepTimingInfo `json:"SubTimingInfos,omitempty"`
 	// If true, this TimingInfo should be counted as part of the sum of its siblings. If false, the TimingInfo should be discarded (e.g. for PreDelays we don't want to count).
 	IsValid bool `json:"IsValid"`
 }

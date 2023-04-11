@@ -31,7 +31,7 @@ type PageElement struct {
 	WaitTime int32 `json:"WaitTime"`
 	// Number of milliseconds it took to retrieve the data
 	ReceiveTime int32 `json:"ReceiveTime"`
-	// Number of milliseconds the connection was timed-out
+	// Number of milliseconds the connection was timed-out 
 	TimeoutTime int32 `json:"TimeoutTime"`
 	// Total number of milliseconds it took for the connection to complete
 	TotalTime int32 `json:"TotalTime"`
@@ -49,7 +49,7 @@ type PageElement struct {
 	ResponseHeaders string `json:"ResponseHeaders,omitempty"`
 	// The IP address that was found for the specified domain name as part of this monitor check.
 	ResolvedIpAddress interface{} `json:"ResolvedIpAddress,omitempty"`
-	GroupIds          []int32     `json:"GroupIds,omitempty"`
+	GroupIds []int32 `json:"GroupIds,omitempty"`
 	// Was the Url excluded from waterfall (timing) data by the user?
 	UrlIsBlocked bool `json:"UrlIsBlocked"`
 }

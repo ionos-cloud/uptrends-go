@@ -8,12 +8,11 @@
  */
 
 package uptrends
-
-// IntegrationAuthorizationType :
+// IntegrationAuthorizationType : 
 type IntegrationAuthorizationType string
 
 // List of IntegrationAuthorizationType
 const (
-	USE_INTEGRATION  IntegrationAuthorizationType = "UseIntegration"
+	USE_INTEGRATION IntegrationAuthorizationType = "UseIntegration"
 	EDIT_INTEGRATION IntegrationAuthorizationType = "EditIntegration"
 )

@@ -10,4 +10,5 @@
 package uptrends
 
 // Only valid for Transaction monitors: the data structure that specifies the transaction steps (and sub steps) to execute.
-type MonitorTransactionStepDefinition struct{}
+type MonitorTransactionStepDefinition struct {
+}

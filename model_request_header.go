@@ -10,6 +10,6 @@
 package uptrends
 
 type RequestHeader struct {
-	Name  string `json:"Name,omitempty"`
+	Name string `json:"Name,omitempty"`
 	Value string `json:"Value,omitempty"`
 }

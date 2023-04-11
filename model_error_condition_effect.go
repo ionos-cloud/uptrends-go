@@ -10,4 +10,5 @@
 package uptrends
 
 // The effect of this error conditions (not used in all types)
-type ErrorConditionEffect struct{}
+type ErrorConditionEffect struct {
+}

@@ -21,6 +21,6 @@ type EscalationLevelIntegration struct {
 	// Specified StatusHubServiceList For Patch request
 	StatusHubServiceListSpecified bool `json:"StatusHubServiceListSpecified,omitempty"`
 	// Indicates whether this Integration is active.
-	IsActive bool   `json:"IsActive,omitempty"`
-	Hash     string `json:"Hash,omitempty"`
+	IsActive bool `json:"IsActive,omitempty"`
+	Hash string `json:"Hash,omitempty"`
 }

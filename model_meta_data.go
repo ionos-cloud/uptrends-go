@@ -10,6 +10,6 @@
 package uptrends
 
 type MetaData struct {
-	Timestamp interface{}     `json:"Timestamp,omitempty"`
-	Period    *PeriodMetaData `json:"Period,omitempty"`
+	Timestamp interface{} `json:"Timestamp,omitempty"`
+	Period *PeriodMetaData `json:"Period,omitempty"`
 }

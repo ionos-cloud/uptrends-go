@@ -10,9 +10,9 @@
 package uptrends
 
 type ExclusionPeriod struct {
-	ExclusionPeriodId int32       `json:"ExclusionPeriodId,omitempty"`
-	Description       string      `json:"Description,omitempty"`
-	From              interface{} `json:"From,omitempty"`
-	Until             interface{} `json:"Until,omitempty"`
-	Hash              string      `json:"Hash,omitempty"`
+	ExclusionPeriodId int32 `json:"ExclusionPeriodId,omitempty"`
+	Description string `json:"Description,omitempty"`
+	From interface{} `json:"From,omitempty"`
+	Until interface{} `json:"Until,omitempty"`
+	Hash string `json:"Hash,omitempty"`
 }

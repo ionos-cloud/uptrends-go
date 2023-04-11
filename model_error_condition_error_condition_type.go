@@ -10,4 +10,5 @@
 package uptrends
 
 // Error condition type
-type ErrorConditionErrorConditionType struct{}
+type ErrorConditionErrorConditionType struct {
+}

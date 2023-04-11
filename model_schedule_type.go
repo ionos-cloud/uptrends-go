@@ -8,15 +8,14 @@
  */
 
 package uptrends
-
-// ScheduleType :
+// ScheduleType : 
 type ScheduleType string
 
 // List of ScheduleType
 const (
-	DAILY     ScheduleType = "Daily"
-	WEEKLY    ScheduleType = "Weekly"
-	MONTHLY   ScheduleType = "Monthly"
+	DAILY ScheduleType = "Daily"
+	WEEKLY ScheduleType = "Weekly"
+	MONTHLY ScheduleType = "Monthly"
 	QUARTERLY ScheduleType = "Quarterly"
-	YEARLY    ScheduleType = "Yearly"
+	YEARLY ScheduleType = "Yearly"
 )

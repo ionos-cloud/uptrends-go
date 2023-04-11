@@ -8,13 +8,12 @@
  */
 
 package uptrends
-
-// MsaBodyType :
+// MsaBodyType : 
 type MsaBodyType string
 
 // List of MsaBodyType
 const (
-	RAW                  MsaBodyType = "Raw"
-	VAULT_FILES          MsaBodyType = "VaultFiles"
+	RAW MsaBodyType = "Raw"
+	VAULT_FILES MsaBodyType = "VaultFiles"
 	VAULT_FILE_AS_BINARY MsaBodyType = "VaultFileAsBinary"
 )

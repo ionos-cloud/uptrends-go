@@ -10,4 +10,5 @@
 package uptrends
 
 // The resposne data/monitor checks
-type MonitorStatusResponseData struct{}
+type MonitorStatusResponseData struct {
+}

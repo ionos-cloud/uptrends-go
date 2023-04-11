@@ -12,8 +12,8 @@ package uptrends
 // Represents the values/results of a single check done by a monitor
 type MonitorCheck struct {
 	Attributes *StatisticsAttributes `json:"Attributes,omitempty"`
-	// Identifier
-	Id    int64  `json:"Id"`
+	// Identifier 
+	Id int64 `json:"Id"`
 	Type_ string `json:"Type,omitempty"`
 	// Relationships of the object
 	Relationships []RelationObject `json:"Relationships,omitempty"`

@@ -8,18 +8,17 @@
  */
 
 package uptrends
-
-// OperatorAuthorizationType :
+// OperatorAuthorizationType : 
 type OperatorAuthorizationType string
 
 // List of OperatorAuthorizationType
 const (
-	ACCOUNT_ACCESS          OperatorAuthorizationType = "AccountAccess"
-	ACCOUNT_ADMINISTRATOR   OperatorAuthorizationType = "AccountAdministrator"
-	ALLOW_INFRA             OperatorAuthorizationType = "AllowInfra"
-	FINANCIAL_OPERATOR      OperatorAuthorizationType = "FinancialOperator"
-	TECHNICAL_CONTACT       OperatorAuthorizationType = "TechnicalContact"
-	SHARE_DASHBOARDS        OperatorAuthorizationType = "ShareDashboards"
+	ACCOUNT_ACCESS OperatorAuthorizationType = "AccountAccess"
+	ACCOUNT_ADMINISTRATOR OperatorAuthorizationType = "AccountAdministrator"
+	ALLOW_INFRA OperatorAuthorizationType = "AllowInfra"
+	FINANCIAL_OPERATOR OperatorAuthorizationType = "FinancialOperator"
+	TECHNICAL_CONTACT OperatorAuthorizationType = "TechnicalContact"
+	SHARE_DASHBOARDS OperatorAuthorizationType = "ShareDashboards"
 	CREATE_ALERT_DEFINITION OperatorAuthorizationType = "CreateAlertDefinition"
-	CREATE_INTEGRATION      OperatorAuthorizationType = "CreateIntegration"
+	CREATE_INTEGRATION OperatorAuthorizationType = "CreateIntegration"
 )

@@ -8,11 +8,32 @@
  */
 
 package uptrends
-
-// ApiVariableSourceType :
+// ApiVariableSourceType : 
 type ApiVariableSourceType string
 
 // List of ApiVariableSourceType
 const (
+	NONE ApiVariableSourceType = "None"
+	CONSTANT ApiVariableSourceType = "Constant"
+	VARIABLE ApiVariableSourceType = "Variable"
+	RESPONSE_STATUS_CODE ApiVariableSourceType = "ResponseStatusCode"
+	RESPONSE_STATUS_DESCRIPTION ApiVariableSourceType = "ResponseStatusDescription"
+	RESPONSE_BODY_JSON ApiVariableSourceType = "ResponseBodyJson"
+	RESPONSE_COMPLETED ApiVariableSourceType = "ResponseCompleted"
+	RESPONSE_BODY_TEXT ApiVariableSourceType = "ResponseBodyText"
+	FAIL ApiVariableSourceType = "Fail"
+	CONTENT_LENGTH_CALCULATED ApiVariableSourceType = "ContentLengthCalculated"
+	DURATION ApiVariableSourceType = "Duration"
+	SUM ApiVariableSourceType = "Sum"
+	CONCATENATION ApiVariableSourceType = "Concatenation"
+	TO_BASE64 ApiVariableSourceType = "ToBase64"
+	TO_SHA1_HEX ApiVariableSourceType = "ToSHA1Hex"
+	TO_MD5_HEX ApiVariableSourceType = "ToMD5Hex"
+	RESPONSE_BODY_XML ApiVariableSourceType = "ResponseBodyXml"
+	RESPONSE_HEADER ApiVariableSourceType = "ResponseHeader"
+	COOKIE ApiVariableSourceType = "Cookie"
+	VARIABLES_RESOLVED ApiVariableSourceType = "VariablesResolved"
+	CUMULATIVE_DURATION ApiVariableSourceType = "CumulativeDuration"
+	RESPONSE_HAS_EXCEPTION ApiVariableSourceType = "ResponseHasException"
 	EXECUTE_FUNCTION ApiVariableSourceType = "ExecuteFunction"
 )

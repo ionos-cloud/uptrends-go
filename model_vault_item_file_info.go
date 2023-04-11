@@ -10,4 +10,5 @@
 package uptrends
 
 // The file info that is stored in this vault item, if applicable
-type VaultItemFileInfo struct{}
+type VaultItemFileInfo struct {
+}

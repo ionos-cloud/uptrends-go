@@ -10,4 +10,5 @@
 package uptrends
 
 // Metrics for describing the load cycle of the entire web page.  Includes CoreWebVitals and other related metrics.
-type WaterfallInfoPageLoadMetrics struct{}
+type WaterfallInfoPageLoadMetrics struct {
+}

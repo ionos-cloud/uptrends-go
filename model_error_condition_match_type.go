@@ -10,4 +10,5 @@
 package uptrends
 
 // The match type of this error conditions (not used in all types)
-type ErrorConditionMatchType struct{}
+type ErrorConditionMatchType struct {
+}

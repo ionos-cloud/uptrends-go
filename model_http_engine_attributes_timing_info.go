@@ -10,4 +10,5 @@
 package uptrends
 
 // Timing info
-type HttpEngineAttributesTimingInfo struct{}
+type HttpEngineAttributesTimingInfo struct {
+}

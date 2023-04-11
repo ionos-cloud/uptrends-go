@@ -15,6 +15,6 @@ type OperatorGroup struct {
 	// The descriptive name of this operator group
 	Description string `json:"Description,omitempty"`
 	// Indicates whether this is the default group for all operators
-	IsEveryone            bool `json:"IsEveryone,omitempty"`
+	IsEveryone bool `json:"IsEveryone,omitempty"`
 	IsAdministratorsGroup bool `json:"IsAdministratorsGroup,omitempty"`
 }

@@ -11,13 +11,13 @@ package uptrends
 
 type OperatorDutySchedule struct {
 	// The unique ID of this maintenance period
-	Id           int32                          `json:"Id"`
+	Id int32 `json:"Id"`
 	ScheduleMode *MaintenancePeriodScheduleMode `json:"ScheduleMode"`
 	// The start date/time for this schedule (for one-time schedules only)
 	StartDateTime interface{} `json:"StartDateTime,omitempty"`
 	// The end date/time for this maintenance period (for one-time maintenance periods only)
-	EndDateTime interface{}               `json:"EndDateTime,omitempty"`
-	WeekDay     *MaintenancePeriodWeekDay `json:"WeekDay,omitempty"`
+	EndDateTime interface{} `json:"EndDateTime,omitempty"`
+	WeekDay *MaintenancePeriodWeekDay `json:"WeekDay,omitempty"`
 	// the month day for this maintenance period (for montly maintenance periods only)
 	MonthDay int32 `json:"MonthDay,omitempty"`
 	// The start time of this maintenance period

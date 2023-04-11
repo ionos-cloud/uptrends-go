@@ -10,7 +10,7 @@
 package uptrends
 
 type PatternMatch struct {
-	Pattern    string                `json:"Pattern,omitempty"`
-	IsPositive bool                  `json:"IsPositive"`
-	DateTime   *DateTimePatternMatch `json:"DateTime,omitempty"`
+	Pattern string `json:"Pattern,omitempty"`
+	IsPositive bool `json:"IsPositive"`
+	DateTime *DateTimePatternMatch `json:"DateTime,omitempty"`
 }

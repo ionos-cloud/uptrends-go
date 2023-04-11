@@ -8,9 +8,34 @@
  */
 
 package uptrends
-
-// PresetPeriodType :
+// PresetPeriodType : 
 type PresetPeriodType string
 
 // List of PresetPeriodType
-const ()
+const (
+	CURRENT_DAY PresetPeriodType = "CurrentDay"
+	CURRENT_WEEK PresetPeriodType = "CurrentWeek"
+	CURRENT_MONTH PresetPeriodType = "CurrentMonth"
+	CURRENT_QUARTER PresetPeriodType = "CurrentQuarter"
+	CURRENT_YEAR PresetPeriodType = "CurrentYear"
+	PREVIOUS_DAY PresetPeriodType = "PreviousDay"
+	PREVIOUS_WEEK PresetPeriodType = "PreviousWeek"
+	PREVIOUS_MONTH PresetPeriodType = "PreviousMonth"
+	PREVIOUS_QUARTER PresetPeriodType = "PreviousQuarter"
+	PREVIOUS_YEAR PresetPeriodType = "PreviousYear"
+	LAST2_HOURS PresetPeriodType = "Last2Hours"
+	LAST6_HOURS PresetPeriodType = "Last6Hours"
+	LAST12_HOURS PresetPeriodType = "Last12Hours"
+	LAST24_HOURS PresetPeriodType = "Last24Hours"
+	LAST48_HOURS PresetPeriodType = "Last48Hours"
+	LAST7_DAYS PresetPeriodType = "Last7Days"
+	LAST30_DAYS PresetPeriodType = "Last30Days"
+	LAST60_DAYS PresetPeriodType = "Last60Days"
+	LAST90_DAYS PresetPeriodType = "Last90Days"
+	LAST365_DAYS PresetPeriodType = "Last365Days"
+	LAST3_MONTHS PresetPeriodType = "Last3Months"
+	LAST6_MONTHS PresetPeriodType = "Last6Months"
+	LAST12_MONTHS PresetPeriodType = "Last12Months"
+	LAST24_MONTHS PresetPeriodType = "Last24Months"
+	ALL PresetPeriodType = "All"
+)

@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**CheckpointServerGetAllServerIpv4Addresses**](CheckpointApi.md#CheckpointServerGetAllServerIpv4Addresses) | **Get** /Checkpoint/Server/Ipv4 | Anonymous call that returns all the IPv4 addresses of all the checkpoint servers.
 [**CheckpointServerGetAllServerIpv6Addresses**](CheckpointApi.md#CheckpointServerGetAllServerIpv6Addresses) | **Get** /Checkpoint/Server/Ipv6 | Anonymous call that returns all the IPv6 addresses of all the checkpoint servers.
 [**CheckpointServerGetServer**](CheckpointApi.md#CheckpointServerGetServer) | **Get** /Checkpoint/Server/{serverId} | Returns the requested checkpoint server.
+[**PrivateCheckpointHealthGetPrivateCheckpointHealthForRegion**](CheckpointApi.md#PrivateCheckpointHealthGetPrivateCheckpointHealthForRegion) | **Get** /PrivateCheckpointHealthForRegion | Returns the status of the private checkpoints in the given region.
 [**PrivateCheckpointHealthGetSpecifiedPrivateCheckpointHealth**](CheckpointApi.md#PrivateCheckpointHealthGetSpecifiedPrivateCheckpointHealth) | **Get** /PrivateCheckpointHealth | Returns the status of the specified private checkpoints.
 
 
@@ -207,6 +208,32 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **PrivateCheckpointHealthGetPrivateCheckpointHealthForRegion**
+> CheckpointsHealth PrivateCheckpointHealthGetPrivateCheckpointHealthForRegion(ctx, regionId)
+Returns the status of the private checkpoints in the given region.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **regionId** | **int32**| The id of the region. | 
+
+### Return type
+
+[**CheckpointsHealth**](CheckpointsHealth.md)
+
+### Authorization
+
+[basicauth](../README.md#basicauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json, application/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **PrivateCheckpointHealthGetSpecifiedPrivateCheckpointHealth**
 > CheckpointsHealth PrivateCheckpointHealthGetSpecifiedPrivateCheckpointHealth(ctx, optional)
 Returns the status of the specified private checkpoints.
@@ -223,7 +250,7 @@ Optional parameters are passed through a pointer to a CheckpointApiPrivateCheckp
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **checkpointName** | **optional.String**| The name/filter for the specified private checkpoints. | [default to ]
+ **filter** | **optional.String**|  | [default to ]
 
 ### Return type
 

@@ -8,15 +8,14 @@
  */
 
 package uptrends
-
 // ScheduledReportFileType : Scheduled report file type
 type ScheduledReportFileType string
 
 // List of ScheduledReportFileType
 const (
-	PDF_ATTACHMENT   ScheduledReportFileType = "PDFAttachment"
-	PDF_LINK         ScheduledReportFileType = "PDFLink"
+	PDF_ATTACHMENT ScheduledReportFileType = "PDFAttachment"
+	PDF_LINK ScheduledReportFileType = "PDFLink"
 	EXCEL_ATTACHMENT ScheduledReportFileType = "ExcelAttachment"
-	EXCEL_LINK       ScheduledReportFileType = "ExcelLink"
-	HTML             ScheduledReportFileType = "Html"
+	EXCEL_LINK ScheduledReportFileType = "ExcelLink"
+	HTML ScheduledReportFileType = "Html"
 )

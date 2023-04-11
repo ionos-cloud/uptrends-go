@@ -8,12 +8,11 @@
  */
 
 package uptrends
-
-// EscalationMode :
+// EscalationMode : 
 type EscalationMode string
 
 // List of EscalationMode
 const (
-	ALERT_ON_ERROR_COUNT    EscalationMode = "AlertOnErrorCount"
+	ALERT_ON_ERROR_COUNT EscalationMode = "AlertOnErrorCount"
 	ALERT_ON_ERROR_DURATION EscalationMode = "AlertOnErrorDuration"
 )

@@ -10,4 +10,5 @@
 package uptrends
 
 // Meta data
-type StatisticsResponseMeta struct{}
+type StatisticsResponseMeta struct {
+}

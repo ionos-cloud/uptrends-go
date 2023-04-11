@@ -10,6 +10,6 @@
 package uptrends
 
 type CustomMetric struct {
-	Name         string `json:"Name,omitempty"`
+	Name string `json:"Name,omitempty"`
 	VariableName string `json:"VariableName,omitempty"`
 }
