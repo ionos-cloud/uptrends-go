@@ -8,7 +8,8 @@
  */
 
 package uptrends
-// JwtAlgorithm : 
+
+// JwtAlgorithm :
 type JwtAlgorithm string
 
 // List of JwtAlgorithm

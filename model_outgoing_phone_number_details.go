@@ -10,7 +10,7 @@
 package uptrends
 
 type OutgoingPhoneNumberDetails struct {
-	Id int32 `json:"Id"`
+	Id          int32  `json:"Id"`
 	PhoneNumber string `json:"PhoneNumber,omitempty"`
 	Description string `json:"Description,omitempty"`
 }

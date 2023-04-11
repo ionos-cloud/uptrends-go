@@ -8,11 +8,12 @@
  */
 
 package uptrends
-// SortOrderEnum : 
+
+// SortOrderEnum :
 type SortOrderEnum string
 
 // List of SortOrderEnum
 const (
 	ALPHABETICAL SortOrderEnum = "Alphabetical"
-	BY_STATUS SortOrderEnum = "ByStatus"
+	BY_STATUS    SortOrderEnum = "ByStatus"
 )

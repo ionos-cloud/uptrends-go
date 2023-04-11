@@ -8,12 +8,13 @@
  */
 
 package uptrends
-// HashAlgorithm : 
+
+// HashAlgorithm :
 type HashAlgorithm string
 
 // List of HashAlgorithm
 const (
 	SHA256 HashAlgorithm = "SHA256"
 	SHA512 HashAlgorithm = "SHA512"
-	SHA1 HashAlgorithm = "SHA1"
+	SHA1   HashAlgorithm = "SHA1"
 )

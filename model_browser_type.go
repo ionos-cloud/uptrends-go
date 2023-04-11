@@ -8,12 +8,13 @@
  */
 
 package uptrends
-// BrowserType : 
+
+// BrowserType :
 type BrowserType string
 
 // List of BrowserType
 const (
-	CHROME BrowserType = "Chrome"
+	CHROME                    BrowserType = "Chrome"
 	CHROME_WITH_EXTRA_METRICS BrowserType = "ChromeWithExtraMetrics"
-	EDGE BrowserType = "Edge"
+	EDGE                      BrowserType = "Edge"
 )

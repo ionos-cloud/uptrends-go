@@ -10,6 +10,6 @@
 package uptrends
 
 type OperatorQuota struct {
-	Operators int32 `json:"Operators,omitempty"`
+	Operators      int32 `json:"Operators,omitempty"`
 	OperatorsInUse int32 `json:"OperatorsInUse,omitempty"`
 }

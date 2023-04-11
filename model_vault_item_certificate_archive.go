@@ -10,5 +10,4 @@
 package uptrends
 
 // The certificate archive that is stored in this vault item, if applicable
-type VaultItemCertificateArchive struct {
-}
+type VaultItemCertificateArchive struct{}

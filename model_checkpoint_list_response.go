@@ -11,9 +11,9 @@ package uptrends
 
 type CheckpointListResponse struct {
 	// The resposne data/monitor checks
-	Data []Checkpoint2 `json:"Data,omitempty"`
+	Data  []Checkpoint2            `json:"Data,omitempty"`
 	Links *StatisticsResponseLinks `json:"Links,omitempty"`
 	// Relationships of the object
-	Relationships []RelationObject `json:"Relationships,omitempty"`
-	Meta *StatisticsResponseMeta `json:"Meta,omitempty"`
+	Relationships []RelationObject        `json:"Relationships,omitempty"`
+	Meta          *StatisticsResponseMeta `json:"Meta,omitempty"`
 }

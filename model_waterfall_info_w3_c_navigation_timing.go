@@ -10,5 +10,4 @@
 package uptrends
 
 // W3C Navigation Timing metrics
-type WaterfallInfoW3CNavigationTiming struct {
-}
+type WaterfallInfoW3CNavigationTiming struct{}

@@ -24,7 +24,7 @@ type HttpEngineStep struct {
 	// Did the response complete?
 	ResponseCompleted bool `json:"ResponseCompleted"`
 	// Was this step executed?
-	StepExecuted bool `json:"StepExecuted"`
+	StepExecuted         bool                                `json:"StepExecuted"`
 	AssertionResultsInfo *HttpEngineStepAssertionResultsInfo `json:"AssertionResultsInfo,omitempty"`
 	// Number of milliseconds it took for this step to succeed
 	TotalTime int64 `json:"TotalTime"`

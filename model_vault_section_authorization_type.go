@@ -8,11 +8,12 @@
  */
 
 package uptrends
-// VaultSectionAuthorizationType : 
+
+// VaultSectionAuthorizationType :
 type VaultSectionAuthorizationType string
 
 // List of VaultSectionAuthorizationType
 const (
-	VIEW_VAULT_SECTION VaultSectionAuthorizationType = "ViewVaultSection"
+	VIEW_VAULT_SECTION   VaultSectionAuthorizationType = "ViewVaultSection"
 	CHANGE_VAULT_SECTION VaultSectionAuthorizationType = "ChangeVaultSection"
 )

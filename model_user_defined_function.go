@@ -10,13 +10,13 @@
 package uptrends
 
 type UserDefinedFunction struct {
-	Name string `json:"Name,omitempty"`
-	Type_ *UserDefinedFunctionType `json:"Type"`
+	Name     string                       `json:"Name,omitempty"`
+	Type_    *UserDefinedFunctionType     `json:"Type"`
 	Mappings []UserDefinedFunctionMapping `json:"Mappings,omitempty"`
-	Regex string `json:"Regex,omitempty"`
+	Regex    string                       `json:"Regex,omitempty"`
 	// This property is not supported yet
-	JwtSigningKey string `json:"JwtSigningKey,omitempty"`
-	JwtAlgorithm *UserDefinedFunctionJwtAlgorithm `json:"JwtAlgorithm,omitempty"`
-	HashKey string `json:"HashKey,omitempty"`
-	HashAlgorithm *EngineHashAlgorithm `json:"HashAlgorithm"`
+	JwtSigningKey string                           `json:"JwtSigningKey,omitempty"`
+	JwtAlgorithm  *UserDefinedFunctionJwtAlgorithm `json:"JwtAlgorithm,omitempty"`
+	HashKey       string                           `json:"HashKey,omitempty"`
+	HashAlgorithm *EngineHashAlgorithm             `json:"HashAlgorithm"`
 }

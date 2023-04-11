@@ -10,8 +10,8 @@
 package uptrends
 
 type TransactionStep2 struct {
-	Name string `json:"Name,omitempty"`
-	HasScreenshot bool `json:"HasScreenshot"`
-	HasWaterfall bool `json:"HasWaterfall"`
-	SubSteps []TransactionSubStep `json:"SubSteps,omitempty"`
+	Name          string               `json:"Name,omitempty"`
+	HasScreenshot bool                 `json:"HasScreenshot"`
+	HasWaterfall  bool                 `json:"HasWaterfall"`
+	SubSteps      []TransactionSubStep `json:"SubSteps,omitempty"`
 }

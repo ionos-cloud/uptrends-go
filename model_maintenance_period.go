@@ -11,19 +11,19 @@ package uptrends
 
 type MaintenancePeriod struct {
 	// The unique ID of this maintenance period
-	Id int32 `json:"Id"`
+	Id           int32                          `json:"Id"`
 	ScheduleMode *MaintenancePeriodScheduleMode `json:"ScheduleMode"`
 	// The start date/time for this schedule (for one-time schedules only)
 	StartDateTime interface{} `json:"StartDateTime,omitempty"`
 	// The end date/time for this maintenance period (for one-time maintenance periods only)
-	EndDateTime interface{} `json:"EndDateTime,omitempty"`
-	WeekDay *MaintenancePeriodWeekDay `json:"WeekDay,omitempty"`
+	EndDateTime interface{}               `json:"EndDateTime,omitempty"`
+	WeekDay     *MaintenancePeriodWeekDay `json:"WeekDay,omitempty"`
 	// the month day for this maintenance period (for montly maintenance periods only)
 	MonthDay int32 `json:"MonthDay,omitempty"`
 	// The start time of this maintenance period
 	StartTime string `json:"StartTime,omitempty"`
 	// The end time of this maintenance period
-	EndTime string `json:"EndTime,omitempty"`
+	EndTime         string                            `json:"EndTime,omitempty"`
 	MaintenanceType *MaintenancePeriodMaintenanceType `json:"MaintenanceType"`
 	// The description for this maintenance period
 	Description string `json:"Description,omitempty"`

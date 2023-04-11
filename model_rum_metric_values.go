@@ -10,10 +10,10 @@
 package uptrends
 
 type RumMetricValues struct {
-	Metric *RumMetric `json:"Metric"`
-	Median int32 `json:"Median,omitempty"`
-	Minimum int32 `json:"Minimum,omitempty"`
-	Maximum int32 `json:"Maximum,omitempty"`
-	Average int32 `json:"Average,omitempty"`
-	Count int32 `json:"Count,omitempty"`
+	Metric  *RumMetric `json:"Metric"`
+	Median  int32      `json:"Median,omitempty"`
+	Minimum int32      `json:"Minimum,omitempty"`
+	Maximum int32      `json:"Maximum,omitempty"`
+	Average int32      `json:"Average,omitempty"`
+	Count   int32      `json:"Count,omitempty"`
 }

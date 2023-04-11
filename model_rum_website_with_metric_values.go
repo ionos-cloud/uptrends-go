@@ -10,7 +10,7 @@
 package uptrends
 
 type RumWebsiteWithMetricValues struct {
-	RumWebsiteId string `json:"RumWebsiteId"`
-	Description string `json:"Description,omitempty"`
+	RumWebsiteId string            `json:"RumWebsiteId"`
+	Description  string            `json:"Description,omitempty"`
 	MetricValues []RumMetricValues `json:"MetricValues,omitempty"`
 }

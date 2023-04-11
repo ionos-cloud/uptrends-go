@@ -10,5 +10,4 @@
 package uptrends
 
 // Cursors can be used to navigate the dataset in a fixed manner
-type AlertResponseCursors struct {
-}
+type AlertResponseCursors struct{}

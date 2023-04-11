@@ -10,5 +10,4 @@
 package uptrends
 
 // The SMS provider used to send out SMS alerts
-type OperatorSmsProvider struct {
-}
+type OperatorSmsProvider struct{}

@@ -10,5 +10,4 @@
 package uptrends
 
 // Indicates whether, during the maintenance periods, only alerting will be disabled, or if the entire monitor will be stopped
-type MaintenancePeriodMaintenanceType struct {
-}
+type MaintenancePeriodMaintenanceType struct{}

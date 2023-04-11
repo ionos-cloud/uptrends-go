@@ -8,11 +8,12 @@
  */
 
 package uptrends
-// MsaStepType : 
+
+// MsaStepType :
 type MsaStepType string
 
 // List of MsaStepType
 const (
 	HTTP_REQUEST MsaStepType = "HttpRequest"
-	DELAY MsaStepType = "Delay"
+	DELAY        MsaStepType = "Delay"
 )

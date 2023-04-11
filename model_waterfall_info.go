@@ -10,7 +10,7 @@
 package uptrends
 
 type WaterfallInfo struct {
-	PageLoadMetrics *WaterfallInfoPageLoadMetrics `json:"PageLoadMetrics,omitempty"`
+	PageLoadMetrics     *WaterfallInfoPageLoadMetrics     `json:"PageLoadMetrics,omitempty"`
 	W3CNavigationTiming *WaterfallInfoW3CNavigationTiming `json:"W3CNavigationTiming,omitempty"`
 	// Elements in the waterfall
 	Elements []PageElement `json:"Elements,omitempty"`

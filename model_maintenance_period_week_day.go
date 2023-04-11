@@ -10,5 +10,4 @@
 package uptrends
 
 // The weekday for this maintenance period (for weekly maintenance periods only)
-type MaintenancePeriodWeekDay struct {
-}
+type MaintenancePeriodWeekDay struct{}

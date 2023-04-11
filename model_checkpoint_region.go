@@ -10,7 +10,7 @@
 package uptrends
 
 type CheckpointRegion struct {
-	Id int32 `json:"Id"`
-	Name string `json:"Name,omitempty"`
+	Id           int32   `json:"Id"`
+	Name         string  `json:"Name,omitempty"`
 	ChildRegions []int32 `json:"ChildRegions,omitempty"`
 }

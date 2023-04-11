@@ -10,13 +10,13 @@
 package uptrends
 
 type PublicStatusPage struct {
-	PublicDashboardGuid string `json:"PublicDashboardGuid,omitempty"`
-	Name string `json:"Name,omitempty"`
-	IsPublished bool `json:"IsPublished,omitempty"`
-	PresetPeriodType *PresetPeriodType `json:"PresetPeriodType,omitempty"`
-	CustomizationInfo *CustomizationInfo `json:"CustomizationInfo,omitempty"`
-	SlaGuid string `json:"SlaGuid,omitempty"`
-	SlaGuidSpecified bool `json:"SlaGuidSpecified,omitempty"`
-	MonitorGuids []string `json:"MonitorGuids,omitempty"`
-	MonitorGroupGuids []string `json:"MonitorGroupGuids,omitempty"`
+	PublicDashboardGuid string             `json:"PublicDashboardGuid,omitempty"`
+	Name                string             `json:"Name,omitempty"`
+	IsPublished         bool               `json:"IsPublished,omitempty"`
+	PresetPeriodType    *PresetPeriodType  `json:"PresetPeriodType,omitempty"`
+	CustomizationInfo   *CustomizationInfo `json:"CustomizationInfo,omitempty"`
+	SlaGuid             string             `json:"SlaGuid,omitempty"`
+	SlaGuidSpecified    bool               `json:"SlaGuidSpecified,omitempty"`
+	MonitorGuids        []string           `json:"MonitorGuids,omitempty"`
+	MonitorGroupGuids   []string           `json:"MonitorGroupGuids,omitempty"`
 }

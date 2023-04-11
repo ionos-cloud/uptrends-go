@@ -8,14 +8,15 @@
  */
 
 package uptrends
-// LastErrorLevel : 
+
+// LastErrorLevel :
 type LastErrorLevel string
 
 // List of LastErrorLevel
 const (
-	NO_ERROR LastErrorLevel = "NoError"
-	UNCONFIRMED LastErrorLevel = "Unconfirmed"
-	CONFIRMED LastErrorLevel = "Confirmed"
-	INACTIVE LastErrorLevel = "Inactive"
+	NO_ERROR     LastErrorLevel = "NoError"
+	UNCONFIRMED  LastErrorLevel = "Unconfirmed"
+	CONFIRMED    LastErrorLevel = "Confirmed"
+	INACTIVE     LastErrorLevel = "Inactive"
 	INCONCLUSIVE LastErrorLevel = "Inconclusive"
 )

@@ -10,10 +10,10 @@
 package uptrends
 
 type Schedule struct {
-	ScheduleType *ScheduleType `json:"ScheduleType,omitempty"`
-	Time string `json:"Time,omitempty"`
-	WeekDay *DayOfWeek `json:"WeekDay,omitempty"`
-	Month int32 `json:"Month,omitempty"`
-	MonthDay int32 `json:"MonthDay,omitempty"`
-	QuarterStartMonth int32 `json:"QuarterStartMonth,omitempty"`
+	ScheduleType      *ScheduleType `json:"ScheduleType,omitempty"`
+	Time              string        `json:"Time,omitempty"`
+	WeekDay           *DayOfWeek    `json:"WeekDay,omitempty"`
+	Month             int32         `json:"Month,omitempty"`
+	MonthDay          int32         `json:"MonthDay,omitempty"`
+	QuarterStartMonth int32         `json:"QuarterStartMonth,omitempty"`
 }

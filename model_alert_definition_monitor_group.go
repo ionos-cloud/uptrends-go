@@ -11,5 +11,5 @@ package uptrends
 
 type AlertDefinitionMonitorGroup struct {
 	AlertDefinition string `json:"AlertDefinition"`
-	MonitorGroup string `json:"MonitorGroup"`
+	MonitorGroup    string `json:"MonitorGroup"`
 }

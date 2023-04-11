@@ -8,12 +8,13 @@
  */
 
 package uptrends
-// ErrorConditionConsoleLevel : 
+
+// ErrorConditionConsoleLevel :
 type ErrorConditionConsoleLevel string
 
 // List of ErrorConditionConsoleLevel
 const (
-	INFO ErrorConditionConsoleLevel = "Info"
+	INFO    ErrorConditionConsoleLevel = "Info"
 	WARNING ErrorConditionConsoleLevel = "Warning"
-	ERROR_ ErrorConditionConsoleLevel = "Error"
+	ERROR_  ErrorConditionConsoleLevel = "Error"
 )

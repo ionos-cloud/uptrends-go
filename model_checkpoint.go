@@ -17,7 +17,7 @@ type Checkpoint struct {
 	CheckpointName string `json:"CheckpointName,omitempty"`
 	// The location code of the checkpoint
 	Code string `json:"Code,omitempty"`
-	// The IPv4 addresses of the checkpoint 
+	// The IPv4 addresses of the checkpoint
 	Ipv4Addresses []string `json:"Ipv4Addresses,omitempty"`
 	// The IPv6 addresses of the checkpoint
 	Ipv6Addresses []Ipv6Address `json:"Ipv6Addresses,omitempty"`

@@ -8,13 +8,14 @@
  */
 
 package uptrends
-// CapabilityFilterEnum : 
+
+// CapabilityFilterEnum :
 type CapabilityFilterEnum string
 
 // List of CapabilityFilterEnum
 const (
-	IPV6 CapabilityFilterEnum = "IPv6"
-	PRIMARY_SERVER CapabilityFilterEnum = "PrimaryServer"
+	IPV6              CapabilityFilterEnum = "IPv6"
+	PRIMARY_SERVER    CapabilityFilterEnum = "PrimaryServer"
 	HIGH_AVAILABILITY CapabilityFilterEnum = "HighAvailability"
-	FIDDLER_PROXY CapabilityFilterEnum = "FiddlerProxy"
+	FIDDLER_PROXY     CapabilityFilterEnum = "FiddlerProxy"
 )

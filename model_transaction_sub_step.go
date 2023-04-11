@@ -10,8 +10,8 @@
 package uptrends
 
 type TransactionSubStep struct {
-	Name string `json:"Name,omitempty"`
-	Type_ *SubStepType `json:"Type"`
-	Url string `json:"Url,omitempty"`
-	SetValue string `json:"SetValue,omitempty"`
+	Name     string       `json:"Name,omitempty"`
+	Type_    *SubStepType `json:"Type"`
+	Url      string       `json:"Url,omitempty"`
+	SetValue string       `json:"SetValue,omitempty"`
 }

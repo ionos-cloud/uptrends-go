@@ -10,9 +10,9 @@
 package uptrends
 
 type ApiAuthenticationInfo struct {
-	Id string `json:"Id"`
+	Id                 string                     `json:"Id"`
 	AuthenticationType *ApiHttpAuthenticationType `json:"AuthenticationType"`
-	UserName string `json:"UserName,omitempty"`
-	Password string `json:"Password,omitempty"`
-	PasswordSpecified bool `json:"PasswordSpecified"`
+	UserName           string                     `json:"UserName,omitempty"`
+	Password           string                     `json:"Password,omitempty"`
+	PasswordSpecified  bool                       `json:"PasswordSpecified"`
 }

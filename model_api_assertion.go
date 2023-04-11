@@ -10,8 +10,8 @@
 package uptrends
 
 type ApiAssertion struct {
-	Source *ApiAssertionSourceType `json:"Source"`
-	Property string `json:"Property,omitempty"`
-	Comparison *ApiComparisonType `json:"Comparison"`
-	TargetValue string `json:"TargetValue,omitempty"`
+	Source      *ApiAssertionSourceType `json:"Source"`
+	Property    string                  `json:"Property,omitempty"`
+	Comparison  *ApiComparisonType      `json:"Comparison"`
+	TargetValue string                  `json:"TargetValue,omitempty"`
 }

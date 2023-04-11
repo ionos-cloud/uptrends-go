@@ -14,6 +14,6 @@ type ServerHealth struct {
 	// The name of the checkpoint
 	CheckpointName string `json:"CheckpointName,omitempty"`
 	// The status of the server
-	Status string `json:"Status,omitempty"`
+	Status        string                     `json:"Status,omitempty"`
 	StatusDetails *ServerHealthStatusDetails `json:"StatusDetails,omitempty"`
 }

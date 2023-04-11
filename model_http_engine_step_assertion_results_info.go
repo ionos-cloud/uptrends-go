@@ -10,5 +10,4 @@
 package uptrends
 
 // Results of the assertions in this step
-type HttpEngineStepAssertionResultsInfo struct {
-}
+type HttpEngineStepAssertionResultsInfo struct{}

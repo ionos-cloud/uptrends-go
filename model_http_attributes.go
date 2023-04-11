@@ -13,8 +13,8 @@ package uptrends
 type HttpAttributes struct {
 	// The HTML code retrieved from the target
 	ResponseBody string `json:"ResponseBody,omitempty"`
-	// The HTTP response headers retrieved from the target 
+	// The HTTP response headers retrieved from the target
 	ResponseHeaders string `json:"ResponseHeaders,omitempty"`
-	// The URL of the HTTP Check. 
+	// The URL of the HTTP Check.
 	Url string `json:"Url,omitempty"`
 }

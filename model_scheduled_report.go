@@ -10,15 +10,15 @@
 package uptrends
 
 type ScheduledReport struct {
-	ScheduledReportGuid string `json:"ScheduledReportGuid,omitempty"`
-	Hash string `json:"Hash,omitempty"`
-	DashboardGuid string `json:"DashboardGuid,omitempty"`
-	DashboardGuidSpecified bool `json:"DashboardGuidSpecified,omitempty"`
-	FileType *ScheduledReportFileType `json:"FileType,omitempty"`
-	IsActive bool `json:"IsActive,omitempty"`
-	Schedule *Schedule `json:"Schedule,omitempty"`
-	SelectedPeriod *PresetPeriodTypeWithExclusive `json:"SelectedPeriod,omitempty"`
-	InternalNotes string `json:"InternalNotes,omitempty"`
-	Notes string `json:"Notes,omitempty"`
-	Recipients *Recipients `json:"Recipients,omitempty"`
+	ScheduledReportGuid    string                         `json:"ScheduledReportGuid,omitempty"`
+	Hash                   string                         `json:"Hash,omitempty"`
+	DashboardGuid          string                         `json:"DashboardGuid,omitempty"`
+	DashboardGuidSpecified bool                           `json:"DashboardGuidSpecified,omitempty"`
+	FileType               *ScheduledReportFileType       `json:"FileType,omitempty"`
+	IsActive               bool                           `json:"IsActive,omitempty"`
+	Schedule               *Schedule                      `json:"Schedule,omitempty"`
+	SelectedPeriod         *PresetPeriodTypeWithExclusive `json:"SelectedPeriod,omitempty"`
+	InternalNotes          string                         `json:"InternalNotes,omitempty"`
+	Notes                  string                         `json:"Notes,omitempty"`
+	Recipients             *Recipients                    `json:"Recipients,omitempty"`
 }

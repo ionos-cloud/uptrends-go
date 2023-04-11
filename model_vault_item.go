@@ -19,15 +19,15 @@ type VaultItem struct {
 	// The value that is stored in this vault item. Not used for Certificate Archives
 	Value string `json:"Value,omitempty"`
 	// The unique identifier of the vault section that this vault item belongs to
-	VaultSectionGuid string `json:"VaultSectionGuid,omitempty"`
-	VaultItemType *VaultItemVaultItemType `json:"VaultItemType,omitempty"`
+	VaultSectionGuid string                  `json:"VaultSectionGuid,omitempty"`
+	VaultItemType    *VaultItemVaultItemType `json:"VaultItemType,omitempty"`
 	// Notes about this vault item
 	Notes string `json:"Notes,omitempty"`
 	// The UserName of a credentialset
 	UserName string `json:"UserName,omitempty"`
 	// The password associated with a credentialset
-	Password string `json:"Password,omitempty"`
-	CertificateArchive *VaultItemCertificateArchive `json:"CertificateArchive,omitempty"`
-	FileInfo *VaultItemFileInfo `json:"FileInfo,omitempty"`
+	Password            string                        `json:"Password,omitempty"`
+	CertificateArchive  *VaultItemCertificateArchive  `json:"CertificateArchive,omitempty"`
+	FileInfo            *VaultItemFileInfo            `json:"FileInfo,omitempty"`
 	OneTimePasswordInfo *VaultItemOneTimePasswordInfo `json:"OneTimePasswordInfo,omitempty"`
 }

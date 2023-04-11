@@ -11,7 +11,7 @@ package uptrends
 
 type HttpCheckDetails struct {
 	Attributes *StatisticsAttributes `json:"Attributes,omitempty"`
-	// Identifier 
+	// Identifier
 	Id int64 `json:"Id"`
 	// Object type
 	Type_ string `json:"Type,omitempty"`

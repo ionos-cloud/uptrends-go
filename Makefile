@@ -1,5 +1,10 @@
-generate:
-#	@go run github.com/go-swagger/go-swagger/cmd/swagger generate client -f https://api.uptrends.com/v4/swagger/v1/swagger.json --skip-validation
+# GO related variables.
+GO ?= go
+GO_RUN_TOOLS ?= $(GO) run -modfile ./tools/go.mod
+GO_TEST = $(GO_RUN_TOOLS) gotest.tools/gotestsum --format pkgname
+
+.PHONY: generate
+generate: ## Run generate commands.
 	java -jar ./swagger-codegen-cli.jar \
     generate -DpackageName=uptrends \
     -i "https://api.uptrends.com/v4/swagger/v1/swagger.json" \
@@ -7,8 +12,8 @@ generate:
 
 .PHONY: fmt
 fmt: ## Run go fmt against code.
-	go run mvdan.cc/gofumpt -w .
+	$(GO) run mvdan.cc/gofumpt -w .
 
 .PHONY: vet
 vet: ## Run go vet against code.
-	go vet ./...
+	$(GO) vet ./...

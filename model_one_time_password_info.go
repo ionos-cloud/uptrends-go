@@ -10,8 +10,8 @@
 package uptrends
 
 type OneTimePasswordInfo struct {
-	Secret string `json:"Secret,omitempty"`
-	Digits int32 `json:"Digits"`
-	Period int32 `json:"Period"`
+	Secret        string         `json:"Secret,omitempty"`
+	Digits        int32          `json:"Digits"`
+	Period        int32          `json:"Period"`
 	HashAlgorithm *HashAlgorithm `json:"HashAlgorithm"`
 }
