@@ -9,5 +9,4 @@
 
 package uptrends
 
-type MonitorMonitorMode struct {
-}
+type MonitorMonitorMode string
